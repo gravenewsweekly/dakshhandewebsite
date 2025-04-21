@@ -26,7 +26,7 @@ document.getElementById('donate-form').addEventListener('submit', function (even
 
     // Razorpay checkout options
     const options = {
-        key: 'rzp_test_Apno0aW38JljQW', // Razorpay test key
+        key: 'rzp_live_Apno0aW38JljQW', // Razorpay test key
         amount: Math.round(amount), // Ensure integer amount in paise
         currency: 'USD', // As specified in donate.html
         name: 'Daksh Hande Philanthropy',
