@@ -321,16 +321,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Replace Inspectlet with modern analytics (e.g., Google Analytics)
   // Example Google Analytics (uncomment and add your tracking ID)
   /*
-  (function() {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-    document.head.appendChild(script);
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS17PRTZC1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  })();
-  */
-});
+  gtag('config', 'G-SS17PRTZC1');
+</script>
