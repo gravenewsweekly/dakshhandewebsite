@@ -3,79 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Support Daksh Hande's philanthropy initiatives for education and environmental causes in Western countries. Donate to help make a difference.">
-    <meta name="keywords" content="Daksh Hande, donate, philanthropy, education, environment, charity">
+    <meta name="description" content="Support Daksh Hande's Future Philanthropic Initiatives">
+    <meta name="keywords" content="donate, Daksh Hande philanthropy, education and environment causes">
     <meta name="author" content="Daksh Hande">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Donate to Daksh Hande’s Philanthropy Initiatives">
-    <meta property="og:description" content="Contribute to Daksh Hande’s vision for education and environmental causes in Western countries. Your donation will support impactful initiatives starting in 2027.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Support Future Philanthropic Work">
+    <meta property="og:description" content="Contribute to Daksh Hande's upcoming education and environmental initiatives">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dakshhande.site/donate.html">
-    <meta property="og:image" content="https://source.unsplash.com/random/1200x630?charity">
-    <title>Donate to Daksh Hande’s Philanthropy Initiatives</title>
+    
+    <title>Donate | Supporting Future Education & Environmental Initiatives</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Razorpay Checkout Integration -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="container">
             <div class="logo">
-                <h1>Daksh Hande</h1>
+                <a href="index.html">Daksh Hande</a>
             </div>
-        </nav>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="philanthropy.html">Philanthropy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn active">Donate</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="donate-hero">
-            <h2>Support the Cause</h2>
-            <p>Your donation will help fuel my philanthropy initiatives focused on education and environmental sustainability in Western countries.</p>
+            <div class="container">
+                <h1>Support Future Philanthropy</h1>
+                <p class="subtitle">Contributions will fund education and environmental initiatives starting 2027</p>
+                <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80" alt="Hands holding plant with coins" class="hero-image">
+            </div>
         </section>
 
-        <section class="donate-content">
-            <div class="donate-text">
-                <h3>Make a Difference</h3>
-                <p>I, Daksh Hande, am committed to launching philanthropy initiatives in 2027 to support education and environmental causes in Western countries. Your contributions will help lay the groundwork for these programs, ensuring access to quality education and a sustainable future. Every donation counts toward creating a lasting impact.</p>
-                
-                <h4>Donate Now</h4>
-                <p>Select an amount or enter a custom donation to support my vision. All proceeds will be directed toward my planned initiatives, with aspirations to collaborate with organizations like the Leonardo DiCaprio Foundation.</p>
-                
-                <form id="donate-form" class="donate-form">
-                    <label for="amount">Donation Amount (USD)</label>
-                    <div class="amount-options">
-                        <input type="radio" id="amount-10" name="amount" value="10">
-                        <label for="amount-10">$10</label>
-                        <input type="radio" id="amount-25" name="amount" value="25">
-                        <label for="amount-25">$25</label>
-                        <input type="radio" id="amount-50" name="amount" value="50">
-                        <label for="amount-50">$50</label>
-                        <input type="radio" id="amount-100" name="amount" value="100">
-                        <label for="amount-100">$100</label>
+        <section class="donation-info">
+            <div class="container">
+                <h2>How Your Donation Will Be Used</h2>
+                <div class="usage-cards">
+                    <div class="usage-card">
+                        <h3>Education Initiatives</h3>
+                        <p>Funding innovative educational programs in Western countries to provide access to quality learning resources.</p>
                     </div>
-                    
-                    <label for="custom-amount">Custom Amount (USD)</label>
-                    <input type="number" id="custom-amount" name="custom-amount" placeholder="Enter amount" min="1" step="1">
-                    
-                    <button type="submit" id="checkout-button">Proceed to Checkout</button>
-                </form>
+                    <div class="usage-card">
+                        <h3>Environmental Protection</h3>
+                        <p>Supporting conservation efforts and sustainability projects addressing climate change challenges.</p>
+                    </div>
+                    <div class="usage-card">
+                        <h3>Transparent Allocation</h3>
+                        <p>Funds will be held securely until 2027 launch, with regular reporting on usage and impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-options">
+            <div class="container">
+                <h2>Donation Options</h2>
+                <div class="tier-cards">
+                    <div class="tier-card">
+                        <h3>Basic Support</h3>
+                        <p class="amount">₹500</p>
+                        <p>Helps fund educational materials for one student</p>
+                        <button class="btn-donate" data-amount="50000">Donate Now</button>
+                    </div>
+                    <div class="tier-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Sustainer</h3>
+                        <p class="amount">₹2,500</p>
+                        <p>Supports environmental conservation projects</p>
+                        <button class="btn-donate" data-amount="250000">Donate Now</button>
+                    </div>
+                    <div class="tier-card">
+                        <h3>Leadership Gift</h3>
+                        <p class="amount">₹10,000</p>
+                        <p>Funds larger initiatives with naming opportunities</p>
+                        <button class="btn-donate" data-amount="1000000">Donate Now</button>
+                    </div>
+                </div>
                 
-                <p class="donate-note">Note: Donations will be processed securely. Stay tuned for updates on how your contributions are making a difference.</p>
+                <div class="custom-donation">
+                    <h3>Custom Amount</h3>
+                    <div class="custom-input">
+                        <span>₹</span>
+                        <input type="number" id="customAmount" placeholder="Enter amount">
+                        <button id="customDonateBtn" class="btn-secondary">Donate</button>
+                    </div>
+                    <p class="note">Minimum donation: ₹100</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-process">
+            <div class="container">
+                <h2>Secure Donation Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <p>Choose your donation amount</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <p>Enter payment details via Razorpay's secure platform</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <p>Receive immediate confirmation and tax receipt</p>
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <img src="https://razorpay.com/assets/razorpay-glyph.svg" alt="Razorpay Secure Payments" class="razorpay-badge">
+                    <div class="security-text">
+                        <p>All transactions are securely processed through Razorpay</p>
+                        <p>256-bit SSL encryption | PCI-DSS compliant</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="donation-faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>When will my donation be used?</h3>
+                    <p>All funds will be held securely until philanthropic operations begin in 2027. You'll receive updates when your donation is put to work.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is my donation tax-deductible?</h3>
+                    <p>Once the foundation is formally established in 2027, donations will be eligible for tax benefits as per applicable laws.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I get a refund?</h3>
+                    <p>Donations are non-refundable as they are contributions toward future charitable work.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 Daksh Hande. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a href="philanthropy.html">Philanthropy</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="donate.html">Donate</a></li>
-        </ul>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Daksh Hande</h3>
+                    <p>Entrepreneur · Aviation Professional · Chess Player</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="philanthropy.html">Philanthropy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Daksh Hande. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
-    <script src="script.js" defer></script>
+    <!-- Razorpay Integration Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configure Razorpay options
+            const razorpayOptions = {
+                key: 'YOUR_RAZORPAY_KEY_ID', // Replace with your actual Razorpay key
+                amount: 0, // Will be set dynamically
+                currency: 'INR',
+                name: 'Daksh Hande Philanthropy',
+                description: 'Donation for future education and environmental initiatives',
+                image: 'https://dakshhande.site/logo.png', // Your logo URL
+                handler: function(response) {
+                    // Handle successful payment
+                    alert('Thank you for your donation! Payment ID: ' + response.razorpay_payment_id);
+                    // Here you would typically send the payment details to your server
+                },
+                prefill: {
+                    name: '',
+                    email: '',
+                    contact: ''
+                },
+                notes: {
+                    purpose: 'Future philanthropy donation'
+                },
+                theme: {
+                    color: '#4f46e5' // Customize color
+                }
+            };
+
+            // Set up donation buttons
+            const donateButtons = document.querySelectorAll('.btn-donate');
+            donateButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const amount = parseInt(this.getAttribute('data-amount'));
+                    initiateDonation(amount);
+                });
+            });
+
+            // Set up custom donation button
+            const customDonateBtn = document.getElementById('customDonateBtn');
+            customDonateBtn.addEventListener('click', function() {
+                const amountInput = document.getElementById('customAmount');
+                const amount = parseInt(amountInput.value) * 100; // Convert to paise
+                
+                if (isNaN(amount) || amount < 10000) { // Minimum ₹100
+                    alert('Please enter a valid amount (minimum ₹100)');
+                    return;
+                }
+                
+                initiateDonation(amount);
+            });
+
+            // Function to initiate Razorpay payment
+            function initiateDonation(amountInPaise) {
+                razorpayOptions.amount = amountInPaise;
+                const rzp = new Razorpay(razorpayOptions);
+                rzp.open();
+            }
+        });
+    </script>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
