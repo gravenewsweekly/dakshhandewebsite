@@ -3,68 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Daksh Hande, an entrepreneur and aviation professional, for collaborations, inquiries, or to learn more about his work in aviation and philanthropy.">
-    <meta name="keywords" content="Daksh Hande, contact, entrepreneur, aviation, philanthropy, Pune">
+    <meta name="description" content="Contact Daksh Hande - Entrepreneur, Aviation Professional, and Philanthropy Aspirant">
+    <meta name="keywords" content="contact Daksh Hande, business inquiries, collaboration opportunities">
     <meta name="author" content="Daksh Hande">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact Daksh Hande - Entrepreneur & Aviation Professional">
-    <meta property="og:description" content="Reach out to Daksh Hande for inquiries, collaborations, or to discuss his work in aviation, entrepreneurship, and philanthropy.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Contact Daksh Hande">
+    <meta property="og:description" content="Get in touch with Daksh Hande for business, media, or future philanthropy opportunities">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dakshhande.site/contact.html">
-    <meta property="og:image" content="https://source.unsplash.com/random/1200x630?contact">
-    <title>Contact Daksh Hande - Entrepreneur & Aviation Professional</title>
+    
+    <title>Contact | Daksh Hande - Entrepreneur & Aviation Professional</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="header">
+        <div class="container">
             <div class="logo">
-                <h1>Daksh Hande</h1>
+                <a href="index.html">Daksh Hande</a>
             </div>
-        </nav>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="philanthropy.html">Philanthropy</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="donate.html" class="donate-btn">Donate</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="contact-hero">
-            <h2>Get in Touch</h2>
-            <p>Reach out for collaborations, inquiries, or to discuss my work in aviation, entrepreneurship, and philanthropy.</p>
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p class="subtitle">For business inquiries, collaboration opportunities, or future philanthropy discussions</p>
+            </div>
         </section>
 
-        <section class="contact-content">
-            <div class="contact-text">
-                <h3>Contact Daksh Hande</h3>
-                <p>Whether you’re interested in aviation, business ventures, chess, or my upcoming philanthropy initiatives, I’d love to hear from you. Fill out the form below, and I’ll get back to you as soon as possible.</p>
-                
-                <form action="https://formspree.io/f/xnndavba" method="POST" class="contact-form">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    
-                    <button type="submit">Send Message</button>
-                </form>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-form">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm" action="https://formspree.io/f/xnndavba" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="Business Inquiry">Business Inquiry</option>
+                                <option value="Career Opportunity">Career Opportunity</option>
+                                <option value="Philanthropy Discussion">Future Philanthropy Discussion</option>
+                                <option value="Media Request">Media Request</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </div>
+                        <div id="formStatus"></div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <div class="info-card">
+                        <h3>For Professional Inquiries</h3>
+                        <p><strong>Email:</strong> <a href="mailto:handedaksh@gmail.com">business@dakshhande.site</a></p>
+                        <p><strong>Availability:</strong> Monday-Friday, 10AM-6PM IST</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Future Philanthropy Discussions</h3>
+                        <p><strong>Email:</strong> <a href="mailto:handedaksh@gmail.com">philanthropy@dakshhande.site</a></p>
+                        <p>For organizations interested in potential 2027 collaborations</p>
+                    </div>
+                    <div class="social-links">
+                        <h3>Connect Socially</h3>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <h2>Other Ways to Connect</h2>
+                <div class="cta-cards">
+                    <div class="cta-card">
+                        <h3>Career Opportunities</h3>
+                        <p>For aviation or entrepreneurial opportunities</p>
+                        <a href="career.html" class="btn-secondary">View Career Page</a>
+                    </div>
+                    <div class="cta-card">
+                        <h3>Future Donations</h3>
+                        <p>For those interested in future philanthropic support</p>
+                        <a href="donate.html" class="btn-secondary">Donation Info</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 Daksh Hande. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a href="philanthropy.html">Philanthropy</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="donate.html">Donate</a></li>
-        </ul>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Daksh Hande</h3>
+                    <p>Entrepreneur · Aviation Professional · Chess Player</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="career.html">Career</a></li>
+                        <li><a href="philanthropy.html">Philanthropy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Daksh Hande. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    
+    <!-- Formspree submission handling -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            // Show submitting state
+            formStatus.innerHTML = '<p class="form-submitting">Sending your message...</p>';
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.innerHTML = '<p class="form-success">Thank you! Your message has been sent successfully.</p>';
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                formStatus.innerHTML = '<p class="form-error">There was a problem sending your message. Please try again later.</p>';
+            });
+        });
+    </script>
+    
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
