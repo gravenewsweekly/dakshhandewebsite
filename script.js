@@ -7,12 +7,23 @@ const debounce = (func, wait) => {
   };
 };
 
+// Note: Add the following Google Analytics code to your HTML <head> section:
+/*
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS17PRTZC1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SS17PRTZC1');
+</script>
+*/
+
 // Main initialization
 document.addEventListener('DOMContentLoaded', () => {
   // Cached DOM elements
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
-  const navbar = document.querySelector('.navbar');
   const contactForm = document.getElementById('contact-form');
   const newsletterForm = document.getElementById('newsletter-form');
   const donateAmounts = document.querySelectorAll('.donate-amount');
@@ -50,19 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-  };
-
-  // Sticky Navigation
-  const initStickyNav = () => {
-    const stickyNav = debounce(() => {
-      if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    }, 10);
-
-    window.addEventListener('scroll', stickyNav);
   };
 
   // Smooth Scrolling for Anchor Links
@@ -310,23 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize all features
   initMobileNav();
-  initStickyNav();
   initSmoothScroll();
   initForms();
   initDonations();
   initAnimations();
   initBackToTop();
   initCookieConsent();
-
-  // Replace Inspectlet with modern analytics (e.g., Google Analytics)
-  // Example Google Analytics (uncomment and add your tracking ID)
-  /*
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SS17PRTZC1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SS17PRTZC1');
-</script>
+});
