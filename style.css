@@ -1,29 +1,30 @@
-/* ================ EARLY 2000s REFINED WEB DESIGN SYSTEM ================ */
+/* ================ POLISHED 1990s WEB DESIGN SYSTEM ================ */
 :root {
-  /* Color Palette - Professional and soft */
-  --bg: #F5F6F5;         /* Light grey-white background */
-  --fg: #333333;         /* Dark grey text for readability */
-  --primary: #336699;    /* Professional blue for links/accents */
-  --secondary: #666666;  /* Medium grey for secondary text */
-  --accent: #FF9900;     /* Subtle orange for highlights */
-  --border: #CCCCCC;     /* Light grey borders */
-  --gradient-start: #E8ECEF; /* Gradient for headers */
-  --gradient-end: #C9D6DF;   /* Gradient end color */
+  /* Color Palette - Bold yet professional 90s vibe */
+  --bg: #FFFFFF;         /* White background, common in 90s */
+  --fg: #000000;         /* Black text for high contrast */
+  --primary: #0000FF;    /* Electric blue for links/accents */
+  --secondary: #555555;  /* Dark grey for secondary text */
+  --accent: #FF0000;     /* Bright red for highlights */
+  --border: #000000;     /* Solid black borders */
+  --highlight: #FFFF00;  /* Yellow for hover effects */
+  --gradient-start: #C0C0C0; /* Grey gradient start */
+  --gradient-end: #808080;   /* Grey gradient end */
 
-  /* Typography - Clean and readable */
-  --font: Verdana, Geneva, Tahoma, sans-serif; /* Iconic 2000s fonts */
-  --font-alt: Arial, Helvetica, sans-serif;    /* Fallback */
+  /* Typography - Classic 90s fonts */
+  --font: Arial, "MS Sans Serif", sans-serif; /* Iconic 90s fonts */
+  --font-alt: Times New Roman, serif;         /* Fallback for headings */
 
-  /* Spacing - Consistent and balanced */
+  /* Spacing - Simple and consistent */
   --space-xs: 0.5rem;    /* 8px */
   --space-sm: 1rem;      /* 16px */
   --space-md: 1.5rem;    /* 24px */
   --space-lg: 2rem;      /* 32px */
   --space-xl: 3rem;      /* 48px */
 
-  /* Shadows and Radius */
-  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  --radius: 4px;                         /* Gentle rounded corners */
+  /* Borders and Radius */
+  --border-width: 2px;   /* Thicker borders for 90s vibe */
+  --radius: 2px;         /* Minimal rounding for authenticity */
 }
 
 /* ================ BASIC RESET ================ */
@@ -37,53 +38,57 @@
 
 body {
   font-family: var(--font);
-  font-size: 16px; /* Base font size for accessibility */
-  line-height: 1.5; /* Comfortable line spacing */
+  font-size: 16px; /* Base font size for readability */
+  line-height: 1.4; /* Slightly tighter for 90s feel */
   color: var(--fg);
   background-color: var(--bg);
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Links - Clean and interactive */
+/* Links - Bold and underlined */
 a {
   color: var(--primary);
-  text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent);
-  text-decoration: underline;
+  color: var(--fg);
+  background-color: var(--highlight);
+  text-decoration: none;
 }
 
 a:visited {
-  color: #663399; /* Subtle purple for visited links */
+  color: #800080; /* Classic purple for visited links */
 }
 
 /* ================ TYPOGRAPHY ================ */
 h1, h2, h3 {
-  color: var(--fg);
+  font-family: var(--font-alt);
+  color: var(--primary);
   line-height: 1.2;
   margin-bottom: var(--space-sm);
-  font-weight: 600; /* Slightly bold for hierarchy */
+  font-weight: bold;
 }
 
 h1 {
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.5rem; /* Bold and prominent */
   text-align: center;
   margin-bottom: var(--space-md);
+  animation: fadeIn 1s ease-in;
 }
 
 h2 {
-  font-size: 1.75rem; /* 28px */
-  border-bottom: 1px solid var(--border);
+  font-size: 1.8rem;
+  border-bottom: var(--border-width) solid var(--border);
   padding-bottom: var(--space-xs);
   margin-top: var(--space-lg);
 }
 
 h3 {
-  font-size: 1.25rem; /* 20px */
-  color: var(--secondary);
+  font-size: 1.4rem;
+  color: var(--fg);
   margin-top: var(--space-md);
 }
 
@@ -93,8 +98,8 @@ p, ul, ol {
 }
 
 ul, ol {
-  padding-left: 1.5rem;
-  list-style-type: disc;
+  padding-left: 2rem;
+  list-style-type: square; /* 90s-style bullets */
 }
 
 ol {
@@ -106,7 +111,7 @@ li {
 }
 
 strong, b {
-  font-weight: 700;
+  font-weight: bolder;
 }
 
 em, i {
@@ -115,22 +120,20 @@ em, i {
 
 /* ================ LAYOUT ================ */
 .container {
-  max-width: 960px; /* Standard 2000s width */
+  max-width: 800px; /* Typical 90s width */
   margin: var(--space-lg) auto;
   padding: var(--space-md);
-  background-color: #FFFFFF;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background-color: var(--bg);
+  border: var(--border-width) solid var(--border);
+  animation: slideIn 0.5s ease-out;
 }
 
 /* ================ HEADER ================ */
 .header {
   padding: var(--space-md);
   background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
-  border-bottom: 1px solid var(--border);
+  border-bottom: var(--border-width) solid var(--border);
   text-align: center;
-  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .header h1 {
@@ -141,8 +144,8 @@ em, i {
 
 .nav {
   padding: var(--space-sm) 0;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid var(--border);
+  background-color: var(--bg);
+  border-bottom: var(--border-width) solid var(--border);
   text-align: center;
 }
 
@@ -163,14 +166,15 @@ em, i {
   display: inline-block;
   padding: var(--space-xs) var(--space-sm);
   color: var(--primary);
-  font-weight: 500;
-  border-radius: var(--radius);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  border: var(--border-width) solid var(--border);
+  background-color: var(--bg);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .nav a:hover {
   background-color: var(--gradient-start);
-  color: var(--fg);
+  transform: scale(1.05); /* Subtle zoom effect */
   text-decoration: none;
 }
 
@@ -182,42 +186,40 @@ em, i {
 /* ================ FOOTER ================ */
 .footer {
   padding: var(--space-md);
-  border-top: 1px solid var(--border);
+  border-top: var(--border-width) solid var(--border);
   text-align: center;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
   color: var(--secondary);
-  background-color: #FFFFFF;
-  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(to top, var(--gradient-start), var(--gradient-end));
 }
 
 /* ================ LEGAL PAGE STYLES ================ */
 .legal-page {
-  background-color: #FFFFFF;
+  background-color: var(--bg);
   padding: var(--space-md);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: var(--border-width) solid var(--border);
+  animation: fadeIn 1s ease-in;
 }
 
 .legal-section {
   margin-bottom: var(--space-lg);
   padding: var(--space-md);
-  background-color: #F9F9F9;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background-color: #F0F0F0; /* Light grey for contrast */
+  border: var(--border-width) solid var(--border);
 }
 
 .legal-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--primary);
   margin-bottom: var(--space-sm);
   padding-bottom: var(--space-xs);
-  border-bottom: 1px solid var(--border);
+  border-bottom: var(--border-width) solid var(--border);
 }
 
 .legal-list {
   list-style-type: decimal;
-  padding-left: 1.5rem;
-  line-height: 1.6;
+  padding-left: 2rem;
+  line-height: 1.5;
 }
 
 .legal-list li {
@@ -225,7 +227,7 @@ em, i {
 }
 
 .legal-list h3 {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   color: var(--fg);
   margin: var(--space-sm) 0;
 }
@@ -233,7 +235,7 @@ em, i {
 .legal-contact {
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--border);
+  border-top: var(--border-width) solid var(--border);
   font-size: 0.875rem;
   text-align: center;
   color: var(--secondary);
@@ -243,33 +245,44 @@ em, i {
 img {
   max-width: 100%;
   height: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  border: var(--border-width) solid var(--border);
+  padding: 0.25rem;
+  background-color: var(--bg);
   display: block;
   margin: var(--space-md) auto;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02); /* Subtle zoom on hover */
 }
 
 .image-right {
   float: right;
   margin: 0 0 var(--space-md) var(--space-md);
-  max-width: 300px;
+  max-width: 250px;
+}
+
+/* ================ ANIMATIONS ================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* ================ RESPONSIVE DESIGN ================ */
-@media (max-width: 960px) {
+@media (max-width: 800px) {
   .container {
     margin: var(--space-sm);
     padding: var(--space-sm);
-    border-radius: var(--radius);
+    border-left: none;
+    border-right: none;
   }
 
-  .header, .footer {
-    border-radius: 0;
-  }
-}
-
-@media (max-width: 768px) {
   .nav ul {
     flex-direction: column;
     align-items: center;
@@ -290,22 +303,18 @@ img {
   }
 
   .legal-list {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
   }
-
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.125rem; }
 }
 
 @media (max-width: 480px) {
   body {
-    font-size: 14px; /* Slightly smaller for small screens */
+    font-size: 14px;
   }
 
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1rem; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
 
   .container {
     margin: var(--space-xs);
@@ -313,7 +322,7 @@ img {
   }
 
   .legal-list {
-    padding-left: 0.75rem;
+    padding-left: 1rem;
   }
 
   .legal-list li {
