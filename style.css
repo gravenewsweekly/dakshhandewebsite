@@ -1,42 +1,32 @@
-/* ================ 1990s RETRO DESIGN SYSTEM (SIMPLE, SOBER, CLEAN) ================ */
+/* ================ 1990s RETRO DESIGN SYSTEM (SIMPLER, CLEANER, SOBER) ================ */
 :root {
-  /* 1990s-Inspired Color Palette */
-  --primary: #0000ff;         /* Classic blue for links and accents */
-  --secondary: #800080;       /* Retro purple for secondary elements */
-  --background: #c0c0c0;      /* Light gray, reminiscent of old Windows UI */
-  --text: #000000;            /* Black for high contrast */
-  --text-light: #333333;      /* Slightly lighter for secondary text */
-  --highlight: #ff0000;       /* Red for emphasis or errors */
+  /* Minimal 1990s-Inspired Color Palette */
+  --primary: #0000ff;         /* Classic blue for links */
+  --secondary: #800080;       /* Purple for visited links */
+  --background: #c0c0c0;      /* Light gray, Windows 95-esque */
   --surface: #ffffff;         /* White for content areas */
+  --text: #000000;            /* Black for high contrast */
   --border: #000000;          /* Black for borders */
-  --link: #0000ff;            /* Classic blue for hyperlinks */
+  --link: #0000ff;            /* Blue for hyperlinks */
   --link-visited: #800080;    /* Purple for visited links */
-
-  /* No Shadows or Gradients */
-  --shadow: none;             /* No shadows for flat 1990s look */
-  --gradient: none;           /* No gradients for simplicity */
 
   /* Typography */
   --font-base: 'Courier New', Courier, monospace; /* Retro monospaced font */
   --font-alt: 'Arial', sans-serif; /* Fallback for headers */
-  --text-primary: var(--text);
-  --text-secondary: var(--text-light);
-
-  /* No Transitions for Retro Feel */
-  --transition: none;         /* No smooth transitions */
-
-  /* Border Radius */
-  --radius: 0;                /* Sharp corners, no rounded edges */
-
+  
   /* Spacing System */
-  --space-xs: 4px;            /* Tiny spacing for compact layouts */
+  --space-xs: 4px;            /* Minimal spacing */
   --space-sm: 8px;
   --space-md: 12px;
-  --space-lg: 16px;
-  --space-xl: 24px;
-
+  
   /* Accessibility */
   --focus-outline: 1px dotted var(--primary); /* Retro dotted focus */
+  
+  /* No Shadows, Gradients, Transitions, or Radius */
+  --shadow: none;
+  --gradient: none;
+  --transition: none;
+  --radius: 0;
 }
 
 /* ================ BASE RESET ================ */
@@ -49,40 +39,38 @@
 }
 
 html {
-  font-size: 16px; /* Standard for readability */
-  scroll-behavior: auto; /* No smooth scrolling */
+  font-size: 16px; /* Standard base */
 }
 
 body {
   font-family: var(--font-base);
-  font-size: 12px; /* Smaller, retro font size */
+  font-size: 12px; /* Retro, compact */
   line-height: 1.4;
   color: var(--text);
   background-color: var(--background);
-  margin: var(--space-md);
+  margin: var(--space-sm);
 }
 
-/* ================ TYPOGRAPHY SYSTEM ================ */
-h1, h2, h3, h4, h5, h6 {
+/* ================ TYPOGRAPHY ================ */
+h1, h2, h3 {
   font-family: var(--font-alt);
   font-weight: normal; /* No bold for minimalism */
   line-height: 1.2;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   color: var(--text);
 }
 
-h1 { font-size: 24px; }
-h2 { font-size: 20px; }
-h3 { font-size: 16px; }
-h4 { font-size: 14px; }
+h1 { font-size: 20px; } /* Smaller, retro headings */
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
 
 p {
-  margin-bottom: var(--space-md);
-  color: var(--text-light);
-  max-width: 60ch; /* Narrow for readability */
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+  max-width: 50ch; /* Narrower for readability */
 }
 
-/* ================ LINK SYSTEM ================ */
+/* ================ LINKS ================ */
 a {
   color: var(--link);
   text-decoration: underline; /* Classic underlined links */
@@ -93,90 +81,59 @@ a:visited {
 }
 
 a:hover {
-  background-color: var(--primary);
-  color: var(--surface);
-  text-decoration: none;
+  text-decoration: none; /* Subtle hover, no background */
 }
 
-.link-card {
-  display: block;
-  padding: var(--space-sm);
-  border: 1px solid var(--border);
-  background: var(--surface);
+a:focus {
+  outline: var(--focus-outline);
 }
 
-.link-card:hover {
-  background: var(--background);
-}
-
-/* ================ LAYOUT SYSTEM ================ */
+/* ================ LAYOUT ================ */
 .container {
   width: 100%;
-  max-width: 800px; /* Narrow for retro feel */
+  max-width: 640px; /* Narrower for retro simplicity */
   margin: 0 auto;
-  padding: var(--space-md);
+  padding: var(--space-sm);
   background: var(--surface);
   border: 1px solid var(--border);
-}
-
-section {
-  padding: var(--space-lg) 0;
-}
-
-.grid {
-  display: block; /* No grid, simple stacking */
-}
-
-.flex {
-  display: block; /* No flex, stack vertically */
 }
 
 /* ================ HEADER ================ */
 .header {
   background: var(--background);
-  border-bottom: 2px solid var(--border);
-  padding: var(--space-sm) 0;
-}
-
-.header .container {
-  display: block;
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-xs);
   text-align: center;
 }
 
 .logo {
   font-family: var(--font-alt);
-  font-size: 20px;
+  font-size: 16px;
   color: var(--primary);
   text-transform: uppercase;
 }
 
 .nav-links {
   list-style: none;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .nav-links li {
   display: inline;
-  margin-right: var(--space-md);
+  margin: 0 var(--space-sm);
 }
 
 .nav-links a {
-  color: var(--link);
   font-size: 12px;
   text-decoration: underline;
 }
 
-.nav-links a:hover {
-  background: var(--primary);
-  color: var(--surface);
-}
-
-/* ================ BUTTON SYSTEM ================ */
+/* ================ BUTTONS ================ */
 .btn {
   display: inline-block;
-  padding: var(--space-xs) var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
   border: 1px solid var(--border);
-  background: var(--background);
+  background: var(--surface);
   color: var(--text);
   font-family: var(--font-base);
   font-size: 12px;
@@ -185,92 +142,59 @@ section {
 }
 
 .btn:hover {
-  background: var(--primary);
-  color: var(--surface);
+  background: var(--background); /* Subtle hover */
 }
 
 .btn:focus {
   outline: var(--focus-outline);
 }
 
-.btn-primary {
-  background: var(--primary);
-  color: var(--surface);
-}
-
-.btn-primary:hover {
-  background: var(--secondary);
-}
-
-.btn-secondary {
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
-.btn-secondary:hover {
-  background: var(--background);
-}
-
-.btn-group {
-  margin: var(--space-sm) 0;
-}
-
 /* ================ HERO SECTION ================ */
 .hero {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
   text-align: center;
   background: var(--surface);
   border: 1px solid var(--border);
 }
 
 .hero-title {
-  font-size: 24px;
-  margin-bottom: var(--space-sm);
+  font-size: 20px;
+  margin-bottom: var(--space-xs);
 }
 
 .hero-subtitle {
-  font-size: 14px;
-  margin-bottom: var(--space-md);
+  font-size: 12px;
+  margin-bottom: var(--space-sm);
 }
 
-/* ================ CARD SYSTEM ================ */
+/* ================ CARDS ================ */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: var(--space-md);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-sm);
 }
 
 .card-title {
   font-size: 14px;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
-.card-body {
-  color: var(--text-light);
-}
-
-/* ================ IMAGE STYLING ================ */
+/* ================ IMAGES ================ */
 img {
   max-width: 100%;
   height: auto;
   border: 1px solid var(--border);
 }
 
-.profile-img {
-  max-width: 200px;
-  height: 250px;
-  display: block;
-  margin: 0 auto;
-}
-
 .hero-image {
-  max-height: 200px;
-  margin-top: var(--space-md);
+  max-height: 150px;
+  margin-top: var(--space-sm);
 }
 
-/* ================ FORM SYSTEM ================ */
+/* ================ FORMS ================ */
 .form-group {
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .form-group label {
@@ -281,7 +205,7 @@ img {
 
 .form-control {
   width: 100%;
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-xs);
   border: 1px solid var(--border);
   background: var(--surface);
   font-family: var(--font-base);
@@ -293,92 +217,37 @@ img {
 }
 
 textarea.form-control {
-  min-height: 80px;
+  min-height: 60px;
 }
 
 /* ================ FOOTER ================ */
 .footer {
   background: var(--background);
-  color: var(--text);
-  padding: var(--space-lg) 0;
-  border-top: 2px solid var(--border);
+  padding: var(--space-sm);
+  border-top: 1px solid var(--border);
   text-align: center;
 }
 
 .footer-logo {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--primary);
 }
 
-.footer-links a,
-.footer-social a {
+.footer-links a {
   color: var(--link);
   font-size: 12px;
-  margin: 0 var(--space-sm);
-}
-
-.footer-links a:hover,
-.footer-social a:hover {
-  background: var(--primary);
-  color: var(--surface);
+  margin: 0 var(--space-xs);
+  text-decoration: underline;
 }
 
 .footer-bottom {
-  margin-top: var(--space-md);
+  margin-top: var(--space-xs);
   font-size: 10px;
-}
-
-/* ================ UTILITY CLASSES ================ */
-.text-center { text-align: center; }
-.mb-4 { margin-bottom: var(--space-sm); }
-.mb-8 { margin-bottom: var(--space-md); }
-.py-8 { padding: var(--space-md) 0; }
-.px-4 { padding: 0 var(--space-sm); }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.w-full { width: 100%; }
-
-/* ================ NO ANIMATIONS ================ */
-/* Animations removed for retro simplicity */
-
-/* ================ RESPONSIVE DESIGN ================ */
-@media (max-width: 768px) {
-  .container {
-    padding: var(--space-sm);
-  }
-
-  .nav-links li {
-    display: block;
-    margin: var(--space-sm) 0;
-  }
-
-  .header .container {
-    padding: var(--space-sm);
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: var(--space-lg) var(--space-sm);
-  }
-
-  .profile-img {
-    max-width: 150px;
-    height: 200px;
-  }
-
-  .btn {
-    display: block;
-    text-align: center;
-  }
 }
 
 /* ================ CUSTOM SCROLLBAR ================ */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -387,4 +256,47 @@ textarea.form-control {
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
+}
+
+/* ================ RESPONSIVE DESIGN ================ */
+@media (max-width: 640px) {
+  .container {
+    padding: var(--space-xs);
+  }
+
+  .nav-links li {
+    display: block;
+    margin: var(--space-xs) 0;
+  }
+
+  .hero {
+    padding: var(--space-sm);
+  }
+
+  .hero-title {
+    font-size: 18px;
+  }
+
+  .hero-image {
+    max-height: 120px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Slightly larger for small screens */
+  }
+
+  .card {
+    padding: var(--space-xs);
+  }
+
+  .form-control {
+    font-size: 12px;
+  }
 }
