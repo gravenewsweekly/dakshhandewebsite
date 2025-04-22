@@ -1,17 +1,18 @@
 /* ================ EARLY 2000s WEB DESIGN SYSTEM ================ */
 :root {
   /* Updated 2000s Color Palette */
-  --bg: #e6e6e6;              /* Slightly darker gray */
-  --fg: #333333;              /* Softened black */
-  --link: #0066cc;            /* Softer blue */
-  --vlink: #660099;           /* Softer purple */
-  --border: #999999;          /* Gray borders */
-  --highlight: #ffffcc;       /* Pale yellow for hover states */
+  --bg: #e6e6e6;
+  --fg: #333333;
+  --link: #0066cc;
+  --vlink: #660099;
+  --border: #999999;
+  --highlight: #ffffcc;
+  --legal-bg: #ffffff;
   
-  /* Font stack with more options */
+  /* Font stack */
   --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
   
-  /* Spacing system */
+  /* Spacing */
   --space-sm: 8px;
   --space-md: 12px;
   --space-lg: 16px;
@@ -124,6 +125,52 @@ a:visited {
   color: #666;
 }
 
+/* ================ LEGAL PAGE STYLES ================ */
+.legal-page {
+  background: var(--legal-bg);
+  padding: var(--space-md);
+}
+
+.legal-section {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--legal-bg);
+  border: 1px solid var(--border);
+}
+
+.legal-section h2 {
+  color: #006;
+  font-size: 1.3rem;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px dotted var(--border);
+}
+
+.legal-list {
+  list-style-type: decimal;
+  margin-left: var(--space-lg);
+  line-height: 1.6;
+}
+
+.legal-list li {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-sm);
+}
+
+.legal-list h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: var(--space-sm) 0;
+}
+
+.legal-contact {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  border-top: 1px dotted var(--border);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* ================ MEDIA ================ */
 img {
   max-width: 100%;
@@ -136,52 +183,6 @@ img {
 .image-right {
   float: right;
   margin: 0 0 var(--space-md) var(--space-md);
-}
-
-/* ================ FORMS ================ */
-input, textarea, select, button {
-  font-family: var(--font);
-  font-size: 1rem;
-  padding: var(--space-sm);
-  border: 1px solid var(--border);
-  margin-bottom: var(--space-md);
-  width: 100%;
-  max-width: 400px;
-}
-
-button, .button {
-  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  cursor: pointer;
-  display: inline-block;
-  padding: var(--space-sm) var(--space-lg);
-  border: 1px solid var(--border);
-  text-align: center;
-}
-
-button:hover, .button:hover {
-  background: linear-gradient(to bottom, #ffffff, #ffffcc);
-}
-
-/* ================ TABLES ================ */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: var(--space-md);
-}
-
-th, td {
-  padding: var(--space-sm);
-  border: 1px solid var(--border);
-  text-align: left;
-}
-
-th {
-  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
-}
-
-/* ================ LISTS ================ */
-ul, ol {
-  margin-left: var(--space-lg);
 }
 
 /* ================ RESPONSIVE ================ */
@@ -203,8 +204,13 @@ ul, ol {
     display: block;
   }
   
-  input, textarea, select, button {
-    max-width: 100%;
+  /* Legal page mobile adjustments */
+  .legal-section {
+    padding: var(--space-sm);
+  }
+  
+  .legal-list {
+    margin-left: var(--space-md);
   }
 }
 
@@ -212,4 +218,13 @@ ul, ol {
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.3rem; }
   h3 { font-size: 1.1rem; }
+  
+  /* Legal page small mobile adjustments */
+  .legal-list {
+    margin-left: var(--space-sm);
+  }
+  
+  .legal-list li {
+    margin-bottom: var(--space-sm);
+  }
 }
