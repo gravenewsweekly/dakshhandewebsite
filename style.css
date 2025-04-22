@@ -1,75 +1,98 @@
-/* ================ SIMPLIFIED & PROFESSIONAL WEB DESIGN SYSTEM ================ */
+/* ================ MODERN & ACCESSIBLE WEB DESIGN SYSTEM ================ */
 :root {
-  /* Sober Color Palette */
-  --bg: #f4f4f4;        /* Light grey background */
-  --fg: #333;          /* Dark grey text */
-  --primary: #004d99;   /* Deep blue primary color for links/accents */
-  --secondary: #6c757d; /* Medium grey for less important text */
-  --border: #ccc;       /* Light grey border */
-  --accent: #e9ecef;    /* Very light grey accent background */
+  /* Updated Color Palette - Emphasis on contrast and accessibility */
+  --bg: #f9f9f9;         /* Very light grey, softer than pure white */
+  --fg: #282828;         /* Dark charcoal grey for excellent readability */
+  --primary: #007bff;      /* Vibrant blue for primary actions and links */
+  --primary-dark: #0056b3; /* Darker shade for hover/active states */
+  --secondary: #6c757d;    /* Medium grey for less prominent text */
+  --accent: #e0f7fa;       /* Light cyan for subtle accents */
+  --border: #d3d3d3;       /* Medium light grey for borders */
+  --success: #28a745;      /* Green for positive feedback */
+  --warning: #ffc107;      /* Yellow for warnings */
+  --error: #dc3545;        /* Red for errors */
 
-  /* Font stack - prioritizing system fonts for simplicity and reliability */
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* Modern Font Stack - Balancing system fonts with a web-safe serif for headings */
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-serif: 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif; /* For headings or specific text */
 
-  /* Simplified Spacing */
-  --space-sm: 0.5rem;   /* 8px */
-  --space-md: 1rem;     /* 16px */
-  --space-lg: 1.5rem;   /* 24px */
+  /* More Expressive Spacing Scale */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1.25rem;   /* 20px */
+  --space-lg: 2rem;     /* 32px */
+  --space-xl: 3rem;     /* 48px */
+
+  /* Subtle Border Radius for a softer look */
+  --radius: 0.25rem;    /* 4px */
+
+  /* Transition Speed for smoother interactions */
+  --transition: all 0.2s ease-in-out;
 }
 
-/* ================ BASE RESET ================ */
+/* ================ BASE RESET & TYPOGRAPHY ================ */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px; /* Ensuring a base for rem units */
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+}
+
 body {
-  font-family: var(--font);
-  font-size: 1rem; /* Base font size */
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--fg);
   background-color: var(--bg);
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility; /* Improve text rendering */
+  -webkit-font-smoothing: antialiased; /* Improve font smoothing for macOS */
 }
 
-/* Remove default link styles initially for better control */
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  background-color: var(--accent); /* Subtle hover feedback */
-}
-
-a:visited {
-  color: #800080; /* A more muted visited color */
-}
-
-/* ================ TYPOGRAPHY ================ */
-h1, h2, h3 {
-  color: var(--primary);
-  line-height: 1.2;
+/* Headings - Utilizing the serif font for visual hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--primary-dark); /* Slightly darker for headings */
+  line-height: 1.3;
   margin-bottom: var(--space-md);
+  font-weight: 700; /* Bold headings */
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: var(--space-lg);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xl);
 }
 
 h2 {
-  font-size: 1.5rem;
-  border-bottom: 1px solid var(--border);
+  font-size: 2rem;
   padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--accent); /* More prominent divider */
 }
 
 h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
   font-size: 1.25rem;
-  color: var(--fg); /* More subtle heading */
+  color: var(--secondary); /* Subtler subheadings */
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 p, ul, ol {
@@ -77,101 +100,279 @@ p, ul, ol {
   color: var(--fg);
 }
 
-/* Basic list styling for better readability */
-ul, ol {
-  padding-left: 1.5rem;
+/* Enhanced list styling */
+ul {
+  list-style: disc;
+  padding-left: var(--space-lg);
+}
+
+ol {
+  list-style: decimal;
+  padding-left: var(--space-lg);
 }
 
 li {
   margin-bottom: var(--space-sm);
 }
 
-/* ================ LAYOUT ================ */
+/* Links - More interactive and visually distinct */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  background-color: transparent; /* Remove background on hover */
+}
+
+a:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+a:visited {
+  color: #8a2be2; /* A more modern visited color */
+}
+
+/* Strong and emphasized text */
+strong {
+  font-weight: 700;
+  color: inherit; /* Inherit the color of the parent */
+}
+
+em {
+  font-style: italic;
+}
+
+/* ================ LAYOUT & CONTAINERS ================ */
 .container {
-  max-width: 960px; /* Slightly wider for a more modern feel */
-  margin: 2rem auto; /* More vertical spacing */
-  padding: var(--space-md);
-  background-color: #fff; /* Clean white container */
-  border: 1px solid var(--border);
-  border-radius: 5px; /* Subtle rounded corners */
+  max-width: 1200px; /* Wider for larger screens */
+  margin: var(--space-xl) auto; /* More generous vertical spacing */
+  padding: 0 var(--space-md); /* Consistent horizontal padding */
 }
 
-/* ================ HEADER ================ */
+.container-fluid {
+  width: 100%;
+  padding: 0 var(--space-md);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--space-md) * -1);
+  margin-right: calc(var(--space-md) * -1);
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+/* Simple grid system (can be extended with more specific column widths) */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage($i / 12);
+  }
+}
+
+/* ================ HEADER & NAVIGATION ================ */
 .header {
-  padding: var(--space-lg);
-  background-color: var(--accent);
+  background-color: #fff;
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--border);
-  border-radius: 5px 5px 0 0; /* Rounded top corners */
 }
 
-.header h1 {
-  margin-bottom: 0;
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.75rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .nav {
-  padding: var(--space-md) 0;
-  margin-top: var(--space-md);
-  border-top: 1px solid var(--border);
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  li a {
+    display: block;
+    padding: var(--space-sm) 0;
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  li a:hover,
+  li a:focus {
+    color: var(--primary);
+  }
+
+  /* Add an active class for the current page */
+  li a.active {
+    color: var(--primary-dark);
+    font-weight: 700;
+  }
 }
 
-.nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Use flexbox for navigation */
-  gap: var(--space-lg);
+/* Responsive navigation (basic example - can be enhanced with a hamburger menu) */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .nav li a {
+    padding: var(--space-xs) 0;
+  }
 }
 
-.nav li a {
-  font-weight: bold;
-  color: var(--primary);
-}
-
-.nav li a:hover {
-  text-decoration: underline;
-}
-
-/* ================ CONTENT ================ */
+/* ================ CONTENT & COMMON ELEMENTS ================ */
 .content {
-  padding: var(--space-lg) 0;
+  padding: var(--space-xl) 0;
+}
+
+/* Buttons - More modern and interactive */
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  color: var(--fg);
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: darken(var(--secondary), 10%);
+  border-color: darken(var(--secondary), 10%);
+}
+
+/* Cards - Useful for displaying grouped content */
+.card {
+  background-color: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-md);
+  overflow: hidden; /* To contain rounded corners */
+}
+
+.card-body {
+  padding: var(--space-md);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--primary-dark);
+}
+
+.card-text {
+  color: var(--fg);
+  margin-bottom: var(--space-md);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  vertical-align: middle; /* Prevent extra space below inline images */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-left {
+  float: left;
+  margin: 0 var(--space-md) var(--space-sm) 0;
+}
+
+.image-right {
+  float: right;
+  margin: 0 0 var(--space-sm) var(--space-md);
 }
 
 /* ================ FOOTER ================ */
 .footer {
-  padding: var(--space-md);
+  background-color: var(--accent);
+  padding: var(--space-lg) 0;
   border-top: 1px solid var(--border);
   text-align: center;
   font-size: 0.9rem;
   color: var(--secondary);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-xl);
 }
 
-/* ================ LEGAL PAGE STYLES ================ */
+.footer p {
+  margin-bottom: 0;
+}
+
+/* ================ LEGAL PAGE STYLES (More Integrated) ================ */
 .legal-page {
-  background-color: #fff;
-  padding: var(--space-md);
+  padding: var(--space-lg) 0;
 }
 
 .legal-section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
   padding: var(--space-md);
-  background-color: var(--accent);
+  background-color: #fff;
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: var(--radius);
 }
 
 .legal-section h2 {
-  font-size: 1.3rem;
-  color: var(--primary);
+  font-size: 2rem;
+  color: var(--primary-dark);
   margin-bottom: var(--space-md);
   padding-bottom: var(--space-sm);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--accent);
 }
 
 .legal-list {
   list-style-type: decimal;
-  padding-left: 1.5rem;
-  line-height: 1.6;
+  padding-left: var(--space-lg);
+  line-height: 1.7;
 }
 
 .legal-list li {
@@ -179,9 +380,9 @@ li {
 }
 
 .legal-list h3 {
-  font-size: 1.1rem;
-  color: var(--fg);
-  margin: var(--space-sm) 0;
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  margin: var(--space-md) 0 var(--space-sm);
 }
 
 .legal-contact {
@@ -193,69 +394,66 @@ li {
   color: var(--secondary);
 }
 
-/* ================ MEDIA ================ */
-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid var(--border);
-  padding: 0.2rem;
-  background-color: #fff;
-  border-radius: 3px;
+/* ================ UTILITIES (Example - can be extended) ================ */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mt-sm { margin-top: var(--space-sm) !important; }
+.mb-sm { margin-bottom: var(--space-sm) !important; }
+/* Add more utility classes as needed */
+
+/* ================ RESPONSIVE ADJUSTMENTS ================ */
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
 }
 
-.image-right {
-  float: right;
-  margin: 0 0 var(--space-md) var(--space-md);
-}
-
-/* ================ RESPONSIVE ================ */
 @media (max-width: 768px) {
   .container {
-    margin: var(--space-md);
-    padding: var(--space-sm);
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
+    padding: 0 var(--space-sm);
   }
 
+  .row {
+    margin-left: calc(var(--space-sm) * -1);
+    margin-right: calc(var(--space-sm) * -1);
+  }
+
+  .col,
+  [class*="col-"] {
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+
   .nav ul {
-    flex-direction: column; /* Stack navigation links on smaller screens */
-    align-items: flex-start;
     gap: var(--space-sm);
   }
 
-  .nav li {
-    margin-bottom: 0;
+  .nav li a {
+    padding: var(--space-xs) 0;
   }
 
-  .image-right {
-    float: none;
-    margin: 0 auto var(--space-md);
-    display: block;
-  }
-
-  /* Legal page mobile adjustments */
   .legal-section {
     padding: var(--space-sm);
-    border-radius: 0;
   }
 
   .legal-list {
-    padding-left: 1rem;
+    padding-left: var(--space-md);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
 
-  /* Legal page small mobile adjustments */
   .legal-list {
-    padding-left: 0.8rem;
-  }
-
-  .legal-list li {
-    margin-bottom: var(--space-xs); /* Even smaller spacing */
+    padding-left: var(--space-sm);
   }
 }
