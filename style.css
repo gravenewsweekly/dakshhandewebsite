@@ -1,80 +1,90 @@
-/* ================ RADICAL RETRO WEB DESIGN SYSTEM (1990s VIBE) ================ */
+/* ================ EARLY 2000s REFINED WEB DESIGN SYSTEM ================ */
 :root {
-  /* Vivid Color Palette - Think bright and bold */
-  --bg: #FFFFFF;         /* Clean white background (common then) */
-  --fg: #000000;         /* Solid black text (high contrast) */
-  --primary: #0000FF;    /* Electric blue for links/accents */
-  --secondary: #808080;  /* Medium grey for less important text */
-  --accent: #FFFF00;     /* Bright yellow for highlights */
-  --border: #000000;     /* Solid black borders - a 90s staple */
+  /* Color Palette - Professional and soft */
+  --bg: #F5F6F5;         /* Light grey-white background */
+  --fg: #333333;         /* Dark grey text for readability */
+  --primary: #336699;    /* Professional blue for links/accents */
+  --secondary: #666666;  /* Medium grey for secondary text */
+  --accent: #FF9900;     /* Subtle orange for highlights */
+  --border: #CCCCCC;     /* Light grey borders */
+  --gradient-start: #E8ECEF; /* Gradient for headers */
+  --gradient-end: #C9D6DF;   /* Gradient end color */
 
-  /* Classic Font Stack - Safe and widely available */
-  --font: Arial, Helvetica, sans-serif; /* Ubiquitous 90s fonts */
+  /* Typography - Clean and readable */
+  --font: Verdana, Geneva, Tahoma, sans-serif; /* Iconic 2000s fonts */
+  --font-alt: Arial, Helvetica, sans-serif;    /* Fallback */
 
-  /* Simple Spacing - Less emphasis on micro-spacing */
-  --space-sm: 0.5em;    /* Roughly 8px */
-  --space-md: 1em;      /* Roughly 16px */
-  --space-lg: 1.5em;    /* Roughly 24px */
+  /* Spacing - Consistent and balanced */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 1rem;      /* 16px */
+  --space-md: 1.5rem;    /* 24px */
+  --space-lg: 2rem;      /* 32px */
+  --space-xl: 3rem;      /* 48px */
+
+  /* Shadows and Radius */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  --radius: 4px;                         /* Gentle rounded corners */
 }
 
-/* ================ BASIC RESET (with a 90s twist) ================ */
+/* ================ BASIC RESET ================ */
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* Still crucial for modern layouts */
-}
-
-body {
-  font-family: var(--font);
-  font-size: 1em; /* Base font size */
-  line-height: 1.3; /* Slightly tighter leading, common then */
-  color: var(--fg);
-  background-color: var(--bg);
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Links - Underlined and bold! */
+body {
+  font-family: var(--font);
+  font-size: 16px; /* Base font size for accessibility */
+  line-height: 1.5; /* Comfortable line spacing */
+  color: var(--fg);
+  background-color: var(--bg);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Links - Clean and interactive */
 a {
   color: var(--primary);
-  text-decoration: underline;
-  font-weight: bold; /* Emphasized links */
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 a:hover {
-  background-color: var(--accent); /* Strong hover feedback */
-  color: var(--fg); /* Ensure contrast on hover */
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 a:visited {
-  color: #800080; /* Purple visited links - a classic */
+  color: #663399; /* Subtle purple for visited links */
 }
 
-/* ================ TYPOGRAPHY (Bold and Clear) ================ */
+/* ================ TYPOGRAPHY ================ */
 h1, h2, h3 {
-  color: var(--primary);
-  line-height: 1.1;
-  margin-bottom: var(--space-md);
-  font-weight: bold; /* Headings should stand out */
+  color: var(--fg);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+  font-weight: 600; /* Slightly bold for hierarchy */
 }
 
 h1 {
-  font-size: 2.5em; /* Larger and impactful */
-  margin-bottom: var(--space-lg);
-  text-align: center; /* Center the main heading */
+  font-size: 2.25rem; /* 36px */
+  text-align: center;
+  margin-bottom: var(--space-md);
 }
 
 h2 {
-  font-size: 1.8em;
-  border-bottom: 2px solid var(--border); /* Thicker border */
-  padding-bottom: var(--space-sm);
-  margin-top: var(--space-lg); /* More space above subheadings */
+  font-size: 1.75rem; /* 28px */
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-xs);
+  margin-top: var(--space-lg);
 }
 
 h3 {
-  font-size: 1.4em;
-  color: var(--fg); /* Subtler but still clear */
-  font-weight: bold;
+  font-size: 1.25rem; /* 20px */
+  color: var(--secondary);
+  margin-top: var(--space-md);
 }
 
 p, ul, ol {
@@ -82,119 +92,132 @@ p, ul, ol {
   color: var(--fg);
 }
 
-/* Simple list styling */
 ul, ol {
-  padding-left: 2em; /* Indentation */
-  list-style-type: disc; /* Classic bullet points */
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
 ol {
-  list-style-type: decimal; /* Numbered lists */
+  list-style-type: decimal;
 }
 
 li {
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
-/* Strong emphasis */
 strong, b {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
-/* Italics for emphasis */
 em, i {
   font-style: italic;
 }
 
-/* ================ LAYOUT (Basic and Centered) ================ */
+/* ================ LAYOUT ================ */
 .container {
-  max-width: 800px; /* A common width then */
-  margin: 2em auto; /* Centered layout with vertical spacing */
+  max-width: 960px; /* Standard 2000s width */
+  margin: var(--space-lg) auto;
   padding: var(--space-md);
-  background-color: #F0F0F0; /* Light grey container background */
-  border: 2px solid var(--border); /* Thicker border for the container */
+  background-color: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
-/* ================ HEADER (Simple Banner) ================ */
+/* ================ HEADER ================ */
 .header {
-  padding: var(--space-lg);
-  background-color: var(--accent); /* Bright header */
-  border-bottom: 2px solid var(--border);
-  text-align: center; /* Center header content */
+  padding: var(--space-md);
+  background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .header h1 {
-  margin-bottom: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--fg);
 }
 
 .nav {
-  padding: var(--space-md) 0;
-  margin-top: var(--space-md);
-  border-top: 2px solid var(--border);
-  text-align: center; /* Center navigation links */
+  padding: var(--space-sm) 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
 .nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-block; /* Center the inline list */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav li {
-  display: inline; /* Horizontal navigation */
-  margin: 0 var(--space-md);
+  margin: 0 var(--space-sm);
 }
 
-.nav li a {
-  font-weight: bold;
+.nav a {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-sm);
   color: var(--primary);
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav li a:hover {
-  background-color: var(--bg); /* Revert background on hover */
+.nav a:hover {
+  background-color: var(--gradient-start);
+  color: var(--fg);
+  text-decoration: none;
 }
 
 /* ================ CONTENT ================ */
 .content {
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg) var(--space-md);
 }
 
-/* ================ FOOTER (Simple and Centered) ================ */
+/* ================ FOOTER ================ */
 .footer {
   padding: var(--space-md);
-  border-top: 2px solid var(--border);
+  border-top: 1px solid var(--border);
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.875rem; /* 14px */
   color: var(--secondary);
-  margin-top: var(--space-lg);
+  background-color: #FFFFFF;
+  border-radius: 0 0 var(--radius) var(--radius);
 }
 
-/* ================ LEGAL PAGE STYLES (Distinct Sections) ================ */
+/* ================ LEGAL PAGE STYLES ================ */
 .legal-page {
   background-color: #FFFFFF;
   padding: var(--space-md);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .legal-section {
   margin-bottom: var(--space-lg);
   padding: var(--space-md);
-  background-color: #E0E0E0; /* Another shade of grey */
-  border: 2px solid var(--border);
+  background-color: #F9F9F9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .legal-section h2 {
-  font-size: 1.6em;
+  font-size: 1.5rem;
   color: var(--primary);
-  margin-bottom: var(--space-md);
-  padding-bottom: var(--space-sm);
-  border-bottom: 2px solid var(--border);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border);
 }
 
 .legal-list {
   list-style-type: decimal;
-  padding-left: 2em;
-  line-height: 1.4;
+  padding-left: 1.5rem;
+  line-height: 1.6;
 }
 
 .legal-list li {
@@ -202,83 +225,115 @@ em, i {
 }
 
 .legal-list h3 {
-  font-size: 1.2em;
+  font-size: 1.125rem;
   color: var(--fg);
   margin: var(--space-sm) 0;
-  font-weight: bold;
 }
 
 .legal-contact {
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
-  border-top: 2px solid var(--border);
-  font-size: 0.9em;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
   text-align: center;
   color: var(--secondary);
 }
 
-/* ================ MEDIA (Simple Borders) ================ */
+/* ================ MEDIA ================ */
 img {
   max-width: 100%;
   height: auto;
-  border: 2px solid var(--border); /* Thicker image borders */
-  padding: 0.2em;
-  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  margin: var(--space-md) auto;
 }
 
 .image-right {
   float: right;
   margin: 0 0 var(--space-md) var(--space-md);
+  max-width: 300px;
 }
 
-/* ================ RESPONSIVE (Basic Adaptability) ================ */
-@media (max-width: 768px) {
+/* ================ RESPONSIVE DESIGN ================ */
+@media (max-width: 960px) {
   .container {
     margin: var(--space-sm);
     padding: var(--space-sm);
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
+    border-radius: var(--radius);
   }
 
+  .header, .footer {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
   .nav ul {
-    display: block; /* Stack navigation on smaller screens */
-    text-align: left;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav li {
-    display: block;
-    margin: var(--space-sm) 0;
+    margin: var(--space-xs) 0;
   }
 
   .image-right {
     float: none;
-    margin: 0 auto var(--space-md);
-    display: block;
+    margin: var(--space-md) auto;
+    max-width: 100%;
   }
 
-  /* Legal page mobile adjustments */
   .legal-section {
     padding: var(--space-sm);
-    border-radius: 0;
   }
 
   .legal-list {
-    padding-left: 1.5em;
+    padding-left: 1rem;
   }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.125rem; }
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; }
-  h3 { font-size: 1.1em; }
+  body {
+    font-size: 14px; /* Slightly smaller for small screens */
+  }
 
-  /* Legal page small mobile adjustments */
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1rem; }
+
+  .container {
+    margin: var(--space-xs);
+    padding: var(--space-xs);
+  }
+
   .legal-list {
-    padding-left: 1em;
+    padding-left: 0.75rem;
   }
 
   .legal-list li {
-    margin-bottom: var(--space-xs); /* Smaller spacing */
+    margin-bottom: var(--space-xs);
   }
+}
+
+/* ================ ACCESSIBILITY ================ */
+:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
