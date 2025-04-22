@@ -1,98 +1,80 @@
-/* ================ MODERN & ACCESSIBLE WEB DESIGN SYSTEM ================ */
+/* ================ RADICAL RETRO WEB DESIGN SYSTEM (1990s VIBE) ================ */
 :root {
-  /* Updated Color Palette - Emphasis on contrast and accessibility */
-  --bg: #f9f9f9;         /* Very light grey, softer than pure white */
-  --fg: #282828;         /* Dark charcoal grey for excellent readability */
-  --primary: #007bff;      /* Vibrant blue for primary actions and links */
-  --primary-dark: #0056b3; /* Darker shade for hover/active states */
-  --secondary: #6c757d;    /* Medium grey for less prominent text */
-  --accent: #e0f7fa;       /* Light cyan for subtle accents */
-  --border: #d3d3d3;       /* Medium light grey for borders */
-  --success: #28a745;      /* Green for positive feedback */
-  --warning: #ffc107;      /* Yellow for warnings */
-  --error: #dc3545;        /* Red for errors */
+  /* Vivid Color Palette - Think bright and bold */
+  --bg: #FFFFFF;         /* Clean white background (common then) */
+  --fg: #000000;         /* Solid black text (high contrast) */
+  --primary: #0000FF;    /* Electric blue for links/accents */
+  --secondary: #808080;  /* Medium grey for less important text */
+  --accent: #FFFF00;     /* Bright yellow for highlights */
+  --border: #000000;     /* Solid black borders - a 90s staple */
 
-  /* Modern Font Stack - Balancing system fonts with a web-safe serif for headings */
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-serif: 'Merriweather', Georgia, Cambria, 'Times New Roman', Times, serif; /* For headings or specific text */
+  /* Classic Font Stack - Safe and widely available */
+  --font: Arial, Helvetica, sans-serif; /* Ubiquitous 90s fonts */
 
-  /* More Expressive Spacing Scale */
-  --space-xs: 0.25rem;   /* 4px */
-  --space-sm: 0.75rem;   /* 12px */
-  --space-md: 1.25rem;   /* 20px */
-  --space-lg: 2rem;     /* 32px */
-  --space-xl: 3rem;     /* 48px */
-
-  /* Subtle Border Radius for a softer look */
-  --radius: 0.25rem;    /* 4px */
-
-  /* Transition Speed for smoother interactions */
-  --transition: all 0.2s ease-in-out;
+  /* Simple Spacing - Less emphasis on micro-spacing */
+  --space-sm: 0.5em;    /* Roughly 8px */
+  --space-md: 1em;      /* Roughly 16px */
+  --space-lg: 1.5em;    /* Roughly 24px */
 }
 
-/* ================ BASE RESET & TYPOGRAPHY ================ */
+/* ================ BASIC RESET (with a 90s twist) ================ */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px; /* Ensuring a base for rem units */
-  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+  box-sizing: border-box; /* Still crucial for modern layouts */
 }
 
 body {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-family: var(--font);
+  font-size: 1em; /* Base font size */
+  line-height: 1.3; /* Slightly tighter leading, common then */
   color: var(--fg);
   background-color: var(--bg);
   margin: 0;
   padding: 0;
-  text-rendering: optimizeLegibility; /* Improve text rendering */
-  -webkit-font-smoothing: antialiased; /* Improve font smoothing for macOS */
 }
 
-/* Headings - Utilizing the serif font for visual hierarchy */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  color: var(--primary-dark); /* Slightly darker for headings */
-  line-height: 1.3;
+/* Links - Underlined and bold! */
+a {
+  color: var(--primary);
+  text-decoration: underline;
+  font-weight: bold; /* Emphasized links */
+}
+
+a:hover {
+  background-color: var(--accent); /* Strong hover feedback */
+  color: var(--fg); /* Ensure contrast on hover */
+}
+
+a:visited {
+  color: #800080; /* Purple visited links - a classic */
+}
+
+/* ================ TYPOGRAPHY (Bold and Clear) ================ */
+h1, h2, h3 {
+  color: var(--primary);
+  line-height: 1.1;
   margin-bottom: var(--space-md);
-  font-weight: 700; /* Bold headings */
+  font-weight: bold; /* Headings should stand out */
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-xl);
+  font-size: 2.5em; /* Larger and impactful */
+  margin-bottom: var(--space-lg);
+  text-align: center; /* Center the main heading */
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--border); /* Thicker border */
   padding-bottom: var(--space-sm);
-  border-bottom: 2px solid var(--accent); /* More prominent divider */
+  margin-top: var(--space-lg); /* More space above subheadings */
 }
 
 h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-  color: var(--secondary); /* Subtler subheadings */
-}
-
-h6 {
-  font-size: 1rem;
-  color: var(--secondary);
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: 1.4em;
+  color: var(--fg); /* Subtler but still clear */
+  font-weight: bold;
 }
 
 p, ul, ol {
@@ -100,279 +82,119 @@ p, ul, ol {
   color: var(--fg);
 }
 
-/* Enhanced list styling */
-ul {
-  list-style: disc;
-  padding-left: var(--space-lg);
+/* Simple list styling */
+ul, ol {
+  padding-left: 2em; /* Indentation */
+  list-style-type: disc; /* Classic bullet points */
 }
 
 ol {
-  list-style: decimal;
-  padding-left: var(--space-lg);
+  list-style-type: decimal; /* Numbered lists */
 }
 
 li {
   margin-bottom: var(--space-sm);
 }
 
-/* Links - More interactive and visually distinct */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: var(--transition);
+/* Strong emphasis */
+strong, b {
+  font-weight: bolder;
 }
 
-a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
-  background-color: transparent; /* Remove background on hover */
-}
-
-a:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-a:visited {
-  color: #8a2be2; /* A more modern visited color */
-}
-
-/* Strong and emphasized text */
-strong {
-  font-weight: 700;
-  color: inherit; /* Inherit the color of the parent */
-}
-
-em {
+/* Italics for emphasis */
+em, i {
   font-style: italic;
 }
 
-/* ================ LAYOUT & CONTAINERS ================ */
+/* ================ LAYOUT (Basic and Centered) ================ */
 .container {
-  max-width: 1200px; /* Wider for larger screens */
-  margin: var(--space-xl) auto; /* More generous vertical spacing */
-  padding: 0 var(--space-md); /* Consistent horizontal padding */
-}
-
-.container-fluid {
-  width: 100%;
-  padding: 0 var(--space-md);
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(var(--space-md) * -1);
-  margin-right: calc(var(--space-md) * -1);
-}
-
-.col {
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
-}
-
-/* Simple grid system (can be extended with more specific column widths) */
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    flex: 0 0 auto;
-    width: percentage($i / 12);
-  }
-}
-
-/* ================ HEADER & NAVIGATION ================ */
-.header {
-  background-color: #fff;
-  padding: var(--space-lg) 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.75rem;
-  color: var(--primary-dark);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.nav {
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: var(--space-lg);
-  }
-
-  li a {
-    display: block;
-    padding: var(--space-sm) 0;
-    color: var(--fg);
-    font-weight: 500;
-  }
-
-  li a:hover,
-  li a:focus {
-    color: var(--primary);
-  }
-
-  /* Add an active class for the current page */
-  li a.active {
-    color: var(--primary-dark);
-    font-weight: 700;
-  }
-}
-
-/* Responsive navigation (basic example - can be enhanced with a hamburger menu) */
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-sm);
-  }
-
-  .nav li a {
-    padding: var(--space-xs) 0;
-  }
-}
-
-/* ================ CONTENT & COMMON ELEMENTS ================ */
-.content {
-  padding: var(--space-xl) 0;
-}
-
-/* Buttons - More modern and interactive */
-.btn {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  cursor: pointer;
-  user-select: none;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: var(--primary);
-  border-color: var(--primary);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
-}
-
-.btn-secondary {
-  color: var(--fg);
-  background-color: var(--secondary);
-  border-color: var(--secondary);
-}
-
-.btn-secondary:hover {
-  background-color: darken(var(--secondary), 10%);
-  border-color: darken(var(--secondary), 10%);
-}
-
-/* Cards - Useful for displaying grouped content */
-.card {
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  margin-bottom: var(--space-md);
-  overflow: hidden; /* To contain rounded corners */
-}
-
-.card-body {
+  max-width: 800px; /* A common width then */
+  margin: 2em auto; /* Centered layout with vertical spacing */
   padding: var(--space-md);
+  background-color: #F0F0F0; /* Light grey container background */
+  border: 2px solid var(--border); /* Thicker border for the container */
 }
 
-.card-title {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
-  color: var(--primary-dark);
+/* ================ HEADER (Simple Banner) ================ */
+.header {
+  padding: var(--space-lg);
+  background-color: var(--accent); /* Bright header */
+  border-bottom: 2px solid var(--border);
+  text-align: center; /* Center header content */
 }
 
-.card-text {
-  color: var(--fg);
-  margin-bottom: var(--space-md);
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  vertical-align: middle; /* Prevent extra space below inline images */
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-.image-left {
-  float: left;
-  margin: 0 var(--space-md) var(--space-sm) 0;
-}
-
-.image-right {
-  float: right;
-  margin: 0 0 var(--space-sm) var(--space-md);
-}
-
-/* ================ FOOTER ================ */
-.footer {
-  background-color: var(--accent);
-  padding: var(--space-lg) 0;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--secondary);
-  margin-top: var(--space-xl);
-}
-
-.footer p {
+.header h1 {
   margin-bottom: 0;
 }
 
-/* ================ LEGAL PAGE STYLES (More Integrated) ================ */
-.legal-page {
+.nav {
+  padding: var(--space-md) 0;
+  margin-top: var(--space-md);
+  border-top: 2px solid var(--border);
+  text-align: center; /* Center navigation links */
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Center the inline list */
+}
+
+.nav li {
+  display: inline; /* Horizontal navigation */
+  margin: 0 var(--space-md);
+}
+
+.nav li a {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav li a:hover {
+  background-color: var(--bg); /* Revert background on hover */
+}
+
+/* ================ CONTENT ================ */
+.content {
   padding: var(--space-lg) 0;
 }
 
-.legal-section {
-  margin-bottom: var(--space-xl);
+/* ================ FOOTER (Simple and Centered) ================ */
+.footer {
   padding: var(--space-md);
-  background-color: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-top: 2px solid var(--border);
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--secondary);
+  margin-top: var(--space-lg);
+}
+
+/* ================ LEGAL PAGE STYLES (Distinct Sections) ================ */
+.legal-page {
+  background-color: #FFFFFF;
+  padding: var(--space-md);
+}
+
+.legal-section {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background-color: #E0E0E0; /* Another shade of grey */
+  border: 2px solid var(--border);
 }
 
 .legal-section h2 {
-  font-size: 2rem;
-  color: var(--primary-dark);
+  font-size: 1.6em;
+  color: var(--primary);
   margin-bottom: var(--space-md);
   padding-bottom: var(--space-sm);
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--border);
 }
 
 .legal-list {
   list-style-type: decimal;
-  padding-left: var(--space-lg);
-  line-height: 1.7;
+  padding-left: 2em;
+  line-height: 1.4;
 }
 
 .legal-list li {
@@ -380,80 +202,83 @@ img {
 }
 
 .legal-list h3 {
-  font-size: 1.5rem;
-  color: var(--primary-dark);
-  margin: var(--space-md) 0 var(--space-sm);
+  font-size: 1.2em;
+  color: var(--fg);
+  margin: var(--space-sm) 0;
+  font-weight: bold;
 }
 
 .legal-contact {
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
-  border-top: 1px solid var(--border);
-  font-size: 0.9rem;
+  border-top: 2px solid var(--border);
+  font-size: 0.9em;
   text-align: center;
   color: var(--secondary);
 }
 
-/* ================ UTILITIES (Example - can be extended) ================ */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.mt-0 { margin-top: 0 !important; }
-.mb-0 { margin-bottom: 0 !important; }
-.mt-sm { margin-top: var(--space-sm) !important; }
-.mb-sm { margin-bottom: var(--space-sm) !important; }
-/* Add more utility classes as needed */
-
-/* ================ RESPONSIVE ADJUSTMENTS ================ */
-@media (max-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
+/* ================ MEDIA (Simple Borders) ================ */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--border); /* Thicker image borders */
+  padding: 0.2em;
+  background-color: var(--bg);
 }
 
+.image-right {
+  float: right;
+  margin: 0 0 var(--space-md) var(--space-md);
+}
+
+/* ================ RESPONSIVE (Basic Adaptability) ================ */
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--space-sm);
+    margin: var(--space-sm);
+    padding: var(--space-sm);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
   }
-
-  .row {
-    margin-left: calc(var(--space-sm) * -1);
-    margin-right: calc(var(--space-sm) * -1);
-  }
-
-  .col,
-  [class*="col-"] {
-    padding-left: var(--space-sm);
-    padding-right: var(--space-sm);
-  }
-
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
 
   .nav ul {
-    gap: var(--space-sm);
+    display: block; /* Stack navigation on smaller screens */
+    text-align: left;
   }
 
-  .nav li a {
-    padding: var(--space-xs) 0;
+  .nav li {
+    display: block;
+    margin: var(--space-sm) 0;
   }
 
+  .image-right {
+    float: none;
+    margin: 0 auto var(--space-md);
+    display: block;
+  }
+
+  /* Legal page mobile adjustments */
   .legal-section {
     padding: var(--space-sm);
+    border-radius: 0;
   }
 
   .legal-list {
-    padding-left: var(--space-md);
+    padding-left: 1.5em;
   }
 }
 
-@media (max-width: 576px) {
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
+@media (max-width: 480px) {
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.1em; }
 
+  /* Legal page small mobile adjustments */
   .legal-list {
-    padding-left: var(--space-sm);
+    padding-left: 1em;
+  }
+
+  .legal-list li {
+    margin-bottom: var(--space-xs); /* Smaller spacing */
   }
 }
