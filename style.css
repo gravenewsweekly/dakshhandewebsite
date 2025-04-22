@@ -1,302 +1,215 @@
-/* ================ 1990s RETRO DESIGN SYSTEM (SIMPLER, CLEANER, SOBER) ================ */
+/* ================ EARLY 2000s WEB DESIGN SYSTEM ================ */
 :root {
-  /* Minimal 1990s-Inspired Color Palette */
-  --primary: #0000ff;         /* Classic blue for links */
-  --secondary: #800080;       /* Purple for visited links */
-  --background: #c0c0c0;      /* Light gray, Windows 95-esque */
-  --surface: #ffffff;         /* White for content areas */
-  --text: #000000;            /* Black for high contrast */
-  --border: #000000;          /* Black for borders */
-  --link: #0000ff;            /* Blue for hyperlinks */
-  --link-visited: #800080;    /* Purple for visited links */
-
-  /* Typography */
-  --font-base: 'Courier New', Courier, monospace; /* Retro monospaced font */
-  --font-alt: 'Arial', sans-serif; /* Fallback for headers */
+  /* Updated 2000s Color Palette */
+  --bg: #e6e6e6;              /* Slightly darker gray */
+  --fg: #333333;              /* Softened black */
+  --link: #0066cc;            /* Softer blue */
+  --vlink: #660099;           /* Softer purple */
+  --border: #999999;          /* Gray borders */
+  --highlight: #ffffcc;       /* Pale yellow for hover states */
   
-  /* Spacing System */
-  --space-xs: 4px;            /* Minimal spacing */
+  /* Font stack with more options */
+  --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+  
+  /* Spacing system */
   --space-sm: 8px;
   --space-md: 12px;
-  
-  /* Accessibility */
-  --focus-outline: 1px dotted var(--primary); /* Retro dotted focus */
-  
-  /* No Shadows, Gradients, Transitions, or Radius */
-  --shadow: none;
-  --gradient: none;
-  --transition: none;
-  --radius: 0;
+  --space-lg: 16px;
 }
 
 /* ================ BASE RESET ================ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-size: 16px; /* Standard base */
+  font-size: 16px;
 }
 
 body {
-  font-family: var(--font-base);
-  font-size: 12px; /* Retro, compact */
+  font-family: var(--font);
+  font-size: 14px;
   line-height: 1.4;
-  color: var(--text);
-  background-color: var(--background);
-  margin: var(--space-sm);
+  color: var(--fg);
+  background: var(--bg);
+  margin: 0;
+  max-width: 100%;
 }
 
 /* ================ TYPOGRAPHY ================ */
-h1, h2, h3 {
-  font-family: var(--font-alt);
-  font-weight: normal; /* No bold for minimalism */
-  line-height: 1.2;
-  margin-bottom: var(--space-xs);
-  color: var(--text);
+h1, h2, h3, h4, p, ul, ol {
+  margin-bottom: var(--space-md);
 }
 
-h1 { font-size: 20px; } /* Smaller, retro headings */
-h2 { font-size: 16px; }
-h3 { font-size: 14px; }
+h1 { 
+  font-size: 1.8rem;
+  color: #006;
+  margin-bottom: var(--space-lg);
+}
 
-p {
-  margin-bottom: var(--space-sm);
-  color: var(--text);
-  max-width: 50ch; /* Narrower for readability */
+h2 { 
+  font-size: 1.5rem;
+  color: #006;
+  border-bottom: 1px dotted var(--border);
+  padding-bottom: var(--space-sm);
+}
+
+h3 { 
+  font-size: 1.2rem;
+  color: #333;
 }
 
 /* ================ LINKS ================ */
 a {
   color: var(--link);
-  text-decoration: underline; /* Classic underlined links */
-}
-
-a:visited {
-  color: var(--link-visited);
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none; /* Subtle hover, no background */
+  text-decoration: underline;
+  background-color: var(--highlight);
 }
 
-a:focus {
-  outline: var(--focus-outline);
+a:visited {
+  color: var(--vlink);
 }
 
 /* ================ LAYOUT ================ */
 .container {
   width: 100%;
-  max-width: 640px; /* Narrower for retro simplicity */
+  max-width: 800px;
   margin: 0 auto;
-  padding: var(--space-sm);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: white;
+  padding: var(--space-md);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
 }
 
 /* ================ HEADER ================ */
 .header {
-  background: var(--background);
-  border-bottom: 1px solid var(--border);
-  padding: var(--space-xs);
-  text-align: center;
-}
-
-.logo {
-  font-family: var(--font-alt);
-  font-size: 16px;
-  color: var(--primary);
-  text-transform: uppercase;
-}
-
-.nav-links {
-  list-style: none;
-  margin-top: var(--space-xs);
-}
-
-.nav-links li {
-  display: inline;
-  margin: 0 var(--space-sm);
-}
-
-.nav-links a {
-  font-size: 12px;
-  text-decoration: underline;
-}
-
-/* ================ BUTTONS ================ */
-.btn {
-  display: inline-block;
-  padding: var(--space-xs) var(--space-sm);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  font-family: var(--font-base);
-  font-size: 12px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.btn:hover {
-  background: var(--background); /* Subtle hover */
-}
-
-.btn:focus {
-  outline: var(--focus-outline);
-}
-
-/* ================ HERO SECTION ================ */
-.hero {
   padding: var(--space-md);
-  text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  border-bottom: 1px solid var(--border);
 }
 
-.hero-title {
-  font-size: 20px;
-  margin-bottom: var(--space-xs);
+.header h1 {
+  margin-bottom: 0;
 }
 
-.hero-subtitle {
-  font-size: 12px;
-  margin-bottom: var(--space-sm);
+.nav {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px dotted var(--border);
+  border-bottom: 1px dotted var(--border);
 }
 
-/* ================ CARDS ================ */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: var(--space-sm);
-  margin-bottom: var(--space-sm);
+.nav a {
+  margin-right: var(--space-lg);
+  font-weight: bold;
 }
 
-.card-title {
-  font-size: 14px;
-  margin-bottom: var(--space-xs);
-}
-
-/* ================ IMAGES ================ */
-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid var(--border);
-}
-
-.hero-image {
-  max-height: 150px;
-  margin-top: var(--space-sm);
-}
-
-/* ================ FORMS ================ */
-.form-group {
-  margin-bottom: var(--space-sm);
-}
-
-.form-group label {
-  display: block;
-  font-size: 12px;
-  margin-bottom: var(--space-xs);
-}
-
-.form-control {
-  width: 100%;
-  padding: var(--space-xs);
-  border: 1px solid var(--border);
-  background: var(--surface);
-  font-family: var(--font-base);
-  font-size: 12px;
-}
-
-.form-control:focus {
-  outline: var(--focus-outline);
-}
-
-textarea.form-control {
-  min-height: 60px;
+/* ================ CONTENT ================ */
+.content {
+  padding: var(--space-md) 0;
 }
 
 /* ================ FOOTER ================ */
 .footer {
-  background: var(--background);
-  padding: var(--space-sm);
+  padding: var(--space-md);
   border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ================ MEDIA ================ */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  padding: 2px;
+  background: white;
+}
+
+.image-right {
+  float: right;
+  margin: 0 0 var(--space-md) var(--space-md);
+}
+
+/* ================ FORMS ================ */
+input, textarea, select, button {
+  font-family: var(--font);
+  font-size: 1rem;
+  padding: var(--space-sm);
+  border: 1px solid var(--border);
+  margin-bottom: var(--space-md);
+  width: 100%;
+  max-width: 400px;
+}
+
+button, .button {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  cursor: pointer;
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid var(--border);
   text-align: center;
 }
 
-.footer-logo {
-  font-size: 14px;
-  color: var(--primary);
+button:hover, .button:hover {
+  background: linear-gradient(to bottom, #ffffff, #ffffcc);
 }
 
-.footer-links a {
-  color: var(--link);
-  font-size: 12px;
-  margin: 0 var(--space-xs);
-  text-decoration: underline;
+/* ================ TABLES ================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-md);
 }
 
-.footer-bottom {
-  margin-top: var(--space-xs);
-  font-size: 10px;
+th, td {
+  padding: var(--space-sm);
+  border: 1px solid var(--border);
+  text-align: left;
 }
 
-/* ================ CUSTOM SCROLLBAR ================ */
-::-webkit-scrollbar {
-  width: 6px;
+th {
+  background: linear-gradient(to bottom, #ffffff, #e6e6e6);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
+/* ================ LISTS ================ */
+ul, ol {
+  margin-left: var(--space-lg);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-
-/* ================ RESPONSIVE DESIGN ================ */
-@media (max-width: 640px) {
+/* ================ RESPONSIVE ================ */
+@media (max-width: 768px) {
   .container {
-    padding: var(--space-xs);
-  }
-
-  .nav-links li {
-    display: block;
-    margin: var(--space-xs) 0;
-  }
-
-  .hero {
     padding: var(--space-sm);
+    border-left: none;
+    border-right: none;
   }
-
-  .hero-title {
-    font-size: 18px;
-  }
-
-  .hero-image {
-    max-height: 120px;
-  }
-
-  .btn {
+  
+  .nav a {
     display: block;
-    width: 100%;
+    margin: var(--space-sm) 0;
+  }
+  
+  .image-right {
+    float: none;
+    margin: var(--space-md) auto;
+    display: block;
+  }
+  
+  input, textarea, select, button {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 14px; /* Slightly larger for small screens */
-  }
-
-  .card {
-    padding: var(--space-xs);
-  }
-
-  .form-control {
-    font-size: 12px;
-  }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
 }
