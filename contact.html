@@ -3,196 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Daksh Hande - Entrepreneur, Aviation Professional, and Philanthropy Aspirant">
-    <meta name="keywords" content="contact Daksh Hande, business inquiries, collaboration opportunities">
+    <meta name="description" content="Contact Daksh Hande, an entrepreneur, aviation professional, and aspiring philanthropist based in Pune, India, for business inquiries, collaborations, or philanthropy discussions.">
+    <meta name="keywords" content="Contact Daksh Hande, Entrepreneur Pune, Aviation Professional, Chess Player, Philanthropy Inquiries, Business Collaboration, Pune Airport">
     <meta name="author" content="Daksh Hande">
-    
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="N79oOl0ADtLxvic-3JDWiEEXI_6oQyFZ-gkvbWJ9-8A" />
+
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Contact Daksh Hande">
-    <meta property="og:description" content="Get in touch with Daksh Hande for business, media, or future philanthropy opportunities">
+    <meta property="og:title" content="Contact Daksh Hande - Entrepreneur & Aviation Professional">
+    <meta property="og:description" content="Reach out to Daksh Hande for business opportunities, media inquiries, or to discuss future philanthropy initiatives starting in 2027.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dakshhande.site/contact.html">
-    
-    <title>Contact | Daksh Hande - Entrepreneur & Aviation Professional</title>
+    <meta property="og:image" content="https://dakshhande.site/images/daksh-hande-contact.jpg">
+    <meta property="og:image:alt" content="Daksh Hande Contact Page">
+    <meta property="og:site_name" content="Daksh Hande Official Website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Daksh Hande - Entrepreneur & Aviation Professional">
+    <meta name="twitter:description" content="Connect with Daksh Hande, an entrepreneur and aviation professional, for business, media, or philanthropy opportunities.">
+    <meta name="twitter:image" content="https://dakshhande.site/images/daksh-hande-contact.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dakshhande.site/contact.html">
+
+    <title>Contact Daksh Hande | Entrepreneur, Aviation Professional & Chess Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Daksh Hande",
+      "description": "Contact page for Daksh Hande, an entrepreneur, aviation professional, and aspiring philanthropist based in Pune, India.",
+      "url": "https://dakshhande.site/contact.html",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "email": "business@dakshhande.site",
+          "contactType": "Business Inquiries",
+          "availability": "Monday-Friday, 10AM-6PM IST"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "philanthropy@dakshhande.site",
+          "contactType": "Philanthropy Discussions"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">Daksh Hande</a>
+                <a href="index.html" aria-label="Daksh Hande Home">
+                    <img src="images/logo.png" alt="Daksh Hande Logo" width="150" height="50">
+                </a>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="career.html">Career</a></li>
                     <li><a href="philanthropy.html">Philanthropy</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
                     <li><a href="donate.html" class="donate-btn">Donate</a></li>
+                    <li><a href="legal.html">Terms & Privacy</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="contact-hero">
+        <section class="contact-hero" aria-labelledby="contact-hero-title">
             <div class="container">
-                <h1>Get In Touch</h1>
-                <p class="subtitle">For business inquiries, collaboration opportunities, or future philanthropy discussions</p>
+                <h1 id="contact-hero-title">Connect With Daksh Hande</h1>
+                <p class="subtitle">Reach out for business collaborations, career opportunities, media inquiries, or to discuss future philanthropy initiatives.</p>
+                <img src="images/daksh-hande-contact-hero.jpg" alt="Daksh Hande in a professional setting" width="1200" height="400" loading="lazy">
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" aria-labelledby="contact-form-title">
             <div class="container">
                 <div class="contact-form">
-                    <h2>Send a Message</h2>
-                    <form id="contactForm" action="https://formspree.io/f/xnndavba" method="POST">
+                    <h2 id="contact-form-title">Send a Message</h2>
+                    <form id="contactForm" action="https://formspree.io/f/xnndavba" method="POST" aria-label="Contact form">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 123 456 7890">
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>
-                            <select id="subject" name="subject" required>
+                            <select id="subject" name="subject" required aria-required="true">
                                 <option value="" disabled selected>Select a topic</option>
                                 <option value="Business Inquiry">Business Inquiry</option>
                                 <option value="Career Opportunity">Career Opportunity</option>
-                                <option value="Philanthropy Discussion">Future Philanthropy Discussion</option>
+                                <option value="Philanthropy Discussion">Philanthropy Discussion</option>
                                 <option value="Media Request">Media Request</option>
+                                <option value="Chess Collaboration">Chess Collaboration</option>
                                 <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <textarea id="message" name="message" rows="8" required aria-required="true" placeholder="Write your message here"></textarea>
                         </div>
                         <div class="form-submit">
-                            <button type="submit" class="btn-primary">Send Message</button>
+                            <button type="submit" class="btn-primary" aria-label="Send message">Send Message</button>
                         </div>
-                        <div id="formStatus"></div>
+                        <div id="formStatus" aria-live="polite"></div>
                     </form>
                 </div>
                 <div class="contact-info">
-                    <h2>Contact Information</h2>
+                    <h2>Contact Details</h2>
                     <div class="info-card">
-                        <h3>For Professional Inquiries</h3>
-                        <p><strong>Email:</strong> <a href="mailto:handedaksh@gmail.com">business@dakshhande.site</a></p>
-                        <p><strong>Availability:</strong> Monday-Friday, 10AM-6PM IST</p>
+                        <h3>Business Inquiries</h3>
+                        <p><strong>Email:</strong> <a href="mailto:business@dakshhande.site">business@dakshhande.site</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+91-123-456-7890">+91 123 456 7890</a></p>
+                        <p><strong>Availability:</strong> Monday–Friday, 10 AM–6 PM IST</p>
                     </div>
                     <div class="info-card">
-                        <h3>Future Philanthropy Discussions</h3>
-                        <p><strong>Email:</strong> <a href="mailto:handedaksh@gmail.com">philanthropy@dakshhande.site</a></p>
-                        <p>For organizations interested in potential 2027 collaborations</p>
+                        <h3>Philanthropy Discussions</h3>
+                        <p><strong>Email:</strong> <a href="mailto:philanthropy@dakshhande.site">philanthropy@dakshhande.site</a></p>
+                        <p>Interested in collaborating on education or environmental initiatives starting in 2027.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Media Inquiries</h3>
+                        <p><strong>Email:</strong> <a href="mailto:media@dakshhande.site">media@dakshhande.site</a></p>
+                        <p>For interviews, features, or speaking engagements.</p>
                     </div>
                     <div class="social-links">
-                        <h3>Connect Socially</h3>
+                        <h3>Follow Me</h3>
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank" rel="noopener noreferrer" aria-label="Follow Daksh Hande on Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/dakshhande" target="_blank" rel="noopener noreferrer" aria-label="Connect with Daksh Hande on LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/dakshhande" target="_blank" rel="noopener noreferrer" aria-label="Follow Daksh Hande on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="contact-cta">
+        <section class="contact-cta" aria-labelledby="cta-title">
             <div class="container">
-                <h2>Other Ways to Connect</h2>
+                <h2 id="cta-title">Explore More Opportunities</h2>
                 <div class="cta-cards">
-                    <div class="cta-card">
-                        <h3>Career Opportunities</h3>
-                        <p>For aviation or entrepreneurial opportunities</p>
-                        <a href="career.html" class="btn-secondary">View Career Page</a>
-                    </div>
-                    <div class="cta-card">
-                        <h3>Future Donations</h3>
-                        <p>For those interested in future philanthropic support</p>
-                        <a href="donate.html" class="btn-secondary">Donation Info</a>
-                    </div>
+                    <article class="cta-card">
+                        <h3>Join My Network</h3>
+                        <p>Explore career opportunities in aviation or collaborate on entrepreneurial ventures.</p>
+                        <a href="career.html" class="btn-secondary" aria-label="Visit career page">Visit Career Page</a>
+                    </article>
+                    <article class="cta-card">
+                        <h3>Support My Vision</h3>
+                        <p>Learn how you can contribute to future philanthropy initiatives starting in 2027.</p>
+                        <a href="donate.html" class="btn-secondary" aria-label="Learn about donations">Donation Info</a>
+                    </article>
+                    <article class="cta-card">
+                        <h3>Chess Community</h3>
+                        <p>Connect for chess tournaments, collaborations, or mentorship opportunities.</p>
+                        <a href="contact.html#subject=Chess Collaboration" class="btn-secondary" aria-label="Contact for chess collaboration">Get in Touch</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3>What is the best way to contact Daksh?</h3>
+                        <p>For business or philanthropy inquiries, use the contact form or email directly. For urgent matters, include your phone number.</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>How quickly will I receive a response?</h3>
+                        <p>Daksh typically responds within 1–2 business days during his availability hours (Monday–Friday, 10 AM–6 PM IST).</p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Can I collaborate on philanthropy projects?</h3>
+                        <p>Yes, Daksh is open to discussions for 2027 initiatives. Email philanthropy@dakshhande.site with your proposal.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" aria-label="Footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Daksh Hande</h3>
-                    <p>Entrepreneur · Aviation Professional · Chess Player</p>
+                    <p>Entrepreneur, aviation professional, and chess enthusiast with a vision for global impact.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
+                    <h3>Explore</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="career.html">Career</a></li>
                         <li><a href="philanthropy.html">Philanthropy</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Connect</h3>
+                    <h3>Connect With Me</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/dakshhande" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/dakshhande" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                     </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:business@dakshhande.site">business@dakshhande.site</a></p>
+                    <p>Phone: <a href="tel:+91-123-456-7890">+91 123 456 7890</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Daksh Hande. All rights reserved.</p>
+                <p>© <span id="year">2025</span> Daksh Hande. All rights reserved. <a href="legal.html">Terms & Privacy</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Font Awesome for social icons -->
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
-    
-    <!-- Formspree submission handling -->
-    <script>
-        const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('formStatus');
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            // Show submitting state
-            formStatus.innerHTML = '<p class="form-submitting">Sending your message...</p>';
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    formStatus.innerHTML = '<p class="form-success">Thank you! Your message has been sent successfully.</p>';
-                    form.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                formStatus.innerHTML = '<p class="form-error">There was a problem sending your message. Please try again later.</p>';
-            });
-        });
-    </script>
-    
-    <!-- Main JavaScript file -->
-    <script src="script.js"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 </body>
-</html>
+                                </html>
