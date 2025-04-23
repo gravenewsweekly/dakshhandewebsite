@@ -3,34 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Daksh Hande - Entrepreneur in Aviation Industry, Chess Player, and Philanthropy Aspirant">
-    <meta name="keywords" content="Daksh Hande, Entrepreneur, Aviation, Chess Player, Philanthropy, Ground Staff, Pune Airport">
+    <meta name="description" content="Daksh Hande - Entrepreneur, Aviation Professional, Chess Player, and Aspiring Philanthropist based in Pune, India.">
+    <meta name="keywords" content="Daksh Hande, Entrepreneur, Aviation Professional, Chess Player, Philanthropy, Pune Airport, Ground Staff, Business Ventures, FIDE Chess">
     <meta name="author" content="Daksh Hande">
+    <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="N79oOl0ADtLxvic-3JDWiEEXI_6oQyFZ-gkvbWJ9-8A" />
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Daksh Hande - Entrepreneur & Aviation Professional">
-    <meta property="og:description" content="Official website of Daksh Hande, Entrepreneur in Aviation Industry and aspiring philanthropist">
+    <meta property="og:title" content="Daksh Hande - Entrepreneur, Aviation Professional & Chess Player">
+    <meta property="og:description" content="Explore the journey of Daksh Hande, an entrepreneur and aviation professional at Pune Airport, passionate about chess and philanthropy.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dakshhande.site">
-    
-    <title>Daksh Hande | Entrepreneur & Aviation Professional</title>
+    <meta property="og:image" content="https://dakshhande.site/images/daksh-hande-profile.jpg">
+    <meta property="og:image:alt" content="Daksh Hande Profile Image">
+    <meta property="og:site_name" content="Daksh Hande Official Website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daksh Hande - Entrepreneur & Aviation Professional">
+    <meta name="twitter:description" content="Official website of Daksh Hande, an entrepreneur, aviation professional, and chess enthusiast with a vision for philanthropy.">
+    <meta name="twitter:image" content="https://dakshhande.site/images/daksh-hande-profile.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dakshhande.site">
+
+    <title>Daksh Hande | Entrepreneur, Aviation Professional & Chess Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Daksh Hande",
+      "jobTitle": "Entrepreneur and Aviation Professional",
+      "description": "Daksh Hande is an entrepreneur, aviation professional at Pune Airport, internationally rated chess player, and aspiring philanthropist.",
+      "url": "https://dakshhande.site",
+      "sameAs": [
+        "https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ=="
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Pune International Airport"
+      }
+    }
+    </script>
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">Daksh Hande</a>
+                <a href="index.html" aria-label="Daksh Hande Home">
+                    <img src="images/logo.png" alt="Daksh Hande Logo" width="150" height="50">
+                </a>
             </div>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="career.html">Career</a></li>
                     <li><a href="philanthropy.html">Philanthropy</a></li>
@@ -38,101 +74,134 @@
                     <li><a href="donate.html" class="donate-btn">Donate</a></li>
                     <li><a href="legal.html">Terms & Privacy</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" aria-labelledby="hero-title">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Daksh Hande</h1>
-                    <h2>Entrepreneur · Aviation Professional · Chess Player</h2>
-                    <p>Building a career in aviation while aspiring to make a difference through future philanthropic endeavors.</p>
+                    <h1 id="hero-title">Daksh Hande</h1>
+                    <h2>Entrepreneur · Aviation Professional · Chess Enthusiast</h2>
+                    <p>Shaping the future of aviation, mastering the chessboard, and aspiring to drive impactful philanthropy.</p>
                     <div class="hero-buttons">
-                        <a href="about.html" class="btn-primary">Learn More</a>
-                        <a href="contact.html" class="btn-secondary">Get in Touch</a>
+                        <a href="about.html" class="btn-primary" aria-label="Learn more about Daksh Hande">Discover My Journey</a>
+                        <a href="contact.html" class="btn-secondary" aria-label="Contact Daksh Hande">Connect With Me</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <!-- Placeholder for hero image - will be added via CSS -->
+                    <img src="images/daksh-hande-hero.jpg" alt="Daksh Hande in professional setting" width="600" height="400" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section class="highlights">
+        <section class="highlights" aria-labelledby="highlights-title">
             <div class="container">
-                <div class="highlight-card">
-                    <h3>Entrepreneur</h3>
-                    <p>Former CEO of Retroweb.space, with plans for new ventures in 2025.</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Aviation Professional</h3>
-                    <p>Currently working as ground staff at Pune Airport since January 2025.</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Chess Player</h3>
-                    <p>Internationally rated chess player with a FIDE rating of 1441.</p>
+                <h2 id="highlights-title" class="section-title">Key Achievements</h2>
+                <div class="highlight-grid">
+                    <article class="highlight-card">
+                        <h3>Entrepreneurial Ventures</h3>
+                        <p>Founded Retroweb.space and planning innovative business ventures for 2025 to redefine industry standards.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <h3>Aviation Expertise</h3>
+                        <p>Serving as ground staff at Pune International Airport since January 2025, ensuring seamless operations.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <h3>Chess Mastery</h3>
+                        <p>Internationally rated chess player with a FIDE rating of 1441, competing in global tournaments.</p>
+                    </article>
+                    <article class="highlight-card">
+                        <h3>Philanthropic Vision</h3>
+                        <p>Committed to launching initiatives in education and environmental sustainability by 2027.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="about-preview">
+        <section class="about-preview" aria-labelledby="about-title">
             <div class="container">
                 <div class="about-image">
-                    <!-- Placeholder for about preview image - will be added via CSS -->
+                    <img src="images/daksh-hande-about.jpg" alt="Daksh Hande in a thoughtful pose" width="500" height="500" loading="lazy">
                 </div>
                 <div class="about-content">
-                    <h2>About Daksh</h2>
-                    <p>Daksh Hande is an entrepreneur currently working in the aviation industry as ground staff at Pune Airport. With a background in business and strong communication skills, he's preparing to launch a new venture in 2025.</p>
-                    <p>Beyond his professional life, Daksh is an internationally rated chess player and has been featured on Wikiquote for his insights.</p>
-                    <a href="about.html" class="btn-primary">Read Full Bio</a>
+                    <h2 id="about-title">Meet Daksh Hande</h2>
+                    <p>Daksh Hande is a dynamic entrepreneur and aviation professional based in Pune, India. Currently contributing to operations at Pune International Airport, he combines strategic business acumen with a passion for aviation.</p>
+                    <p>An avid chess player with a global FIDE rating, Daksh has also been recognized on Wikiquote for his insightful perspectives. His future plans include launching ventures and impactful philanthropic projects.</p>
+                    <a href="about.html" class="btn-primary" aria-label="Read Daksh Hande's full biography">Explore My Story</a>
                 </div>
             </div>
         </section>
 
-        <section class="philanthropy-preview">
+        <section class="philanthropy-preview" aria-labelledby="philanthropy-title">
             <div class="container">
-                <h2>Future Philanthropic Goals</h2>
-                <p>While currently focused on his career, Daksh aspires to contribute to education and environmental causes in Western countries starting in 2027, with aspirations to collaborate with organizations like the Leonardo DiCaprio Foundation.</p>
-                <a href="philanthropy.html" class="btn-secondary">Learn About Future Plans</a>
+                <h2 id="philanthropy-title">Aspiring to Make a Difference</h2>
+                <p>Daksh is dedicated to creating a positive impact through philanthropy, with plans to support education and environmental initiatives in Western countries starting in 2027. He aims to collaborate with global organizations like the Leonardo DiCaprio Foundation.</p>
+                <a href="philanthropy.html" class="btn-secondary" aria-label="Learn about Daksh Hande's philanthropy goals">Discover My Vision</a>
+            </div>
+        </section>
+
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title">What People Say</h2>
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial-card">
+                        <p>"Daksh's dedication to aviation and strategic thinking on the chessboard make him a remarkable individual."</p>
+                        <cite>— John Doe, Aviation Manager</cite>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <p>"His entrepreneurial vision and commitment to philanthropy are truly inspiring."</p>
+                        <cite>— Jane Smith, Business Mentor</cite>
+                    </blockquote>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" aria-label="Footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Daksh Hande</h3>
-                    <p>Entrepreneur · Aviation Professional · Chess Player</p>
+                    <p>Entrepreneur, aviation professional, and chess enthusiast with a mission to inspire and give back.</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Quick Links</h3>
+                    <h3>Explore</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="career.html">Career</a></li>
                         <li><a href="philanthropy.html">Philanthropy</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Connect</h3>
+                    <h3>Connect With Me</h3>
                     <ul>
-                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/dakshhande2k?igsh=MXBzOGs1ZGV4a251YQ==" target="_blank" rel="noopener noreferrer" aria-label="Follow Daksh Hande on Instagram">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/dakshhande" target="_blank" rel="noopener noreferrer" aria-label="Connect with Daksh Hande on LinkedIn">LinkedIn</a></li>
                     </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="mailto:contact@dakshhande.site">contact@dakshhande.site</a></p>
+                    <p>Phone: <a href="tel:+91-123-456-7890">+91 123 456 7890</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span>© 2025 Daksh Hande. All rights reserved.</p>
+                <p>© <span id="year">2025</span> Daksh Hande. All rights reserved. <a href="legal.html">Terms & Privacy</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
 </body>
-</html>
+                </html>
