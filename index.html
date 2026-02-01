@@ -3,1106 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daksh Hande | Official Website | CSE & Philanthropist</title>
-    
-    <!-- Early 2000s style meta tags -->
-    <meta name="description" content="Official verified website of Daksh Hande - Customer Service Executive at Absolute Barbecue and future philanthropist starting 2028. Genuine platform with transparent philanthropy roadmap.">
-    <meta name="keywords" content="Daksh Hande, Absolute Barbecue CSE, Customer Service Executive, Philanthropist 2028, Official Website, Genuine Platform">
-    <meta name="author" content="Daksh Hande">
-    <meta name="robots" content="index, follow">
-    <meta name="rating" content="General">
-    
-    <!-- Favicon with early 2000s aesthetic -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23004d8c%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2260%22 fill=%22%23ffffff%22>DH</text></svg>">
-    
-    <!-- Early 2000s inspired CSS -->
+    <title>Daksh Hande | Official Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Early 2000s Color Palette */
         :root {
-            --primary-blue: #004d8c;
-            --secondary-blue: #0077cc;
-            --accent-orange: #ff6600;
-            --accent-gold: #ffcc00;
-            --dark-bg: #0a1a2a;
-            --medium-bg: #1a2a3a;
-            --light-bg: #f0f5fa;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --border-blue: #0066aa;
-            --shadow-color: rgba(0, 0, 0, 0.3);
-            --gradient-blue: linear-gradient(to bottom, #004d8c, #002244);
-            --gradient-orange: linear-gradient(to bottom, #ff6600, #cc5200);
+            --primary: #0f172a;
+            --accent: #e2e8f0;
+            --gold: #c5a059;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        
-        /* Reset & Base */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        
-        html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
-        
+
         body {
-            font-family: 'Tahoma', 'Verdana', 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--light-bg);
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f5fa"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23e0e8f0" stroke-width="1"/></svg>');
+            background-color: var(--primary);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
             overflow-x: hidden;
         }
-        
-        /* Early 2000s Container */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Classic Early 2000s Header */
-        header {
-            background: var(--gradient-blue);
-            border-bottom: 5px solid var(--accent-orange);
-            padding: 15px 0;
+
+        /* Security & Robustness - Prevent text selection on UI elements */
+        .no-select { user-select: none; }
+
+        /* Navigation */
+        nav {
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 5px 15px var(--shadow-color);
-        }
-        
-        .header-content {
+            width: 100%;
+            padding: 1.5rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        
+
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-gold);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-weight: bold;
-            font-size: 24px;
-            border: 2px solid var(--accent-orange);
-            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-            animation: glow 3s infinite alternate;
-        }
-        
-        .logo-text {
-            color: var(--text-light);
-            font-size: 24px;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .logo-text span {
-            color: var(--accent-gold);
-        }
-        
-        /* Early 2000s Navigation */
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        
-        nav a {
-            color: var(--text-light);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 8px 15px;
-            border-radius: 4px;
-            transition: all 0.3s;
-            position: relative;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
         }
-        
-        nav a:hover {
-            background-color: rgba(255, 102, 0, 0.8);
-            transform: translateY(-2px);
-        }
-        
-        nav a.active {
-            background-color: var(--accent-orange);
-            box-shadow: 0 0 10px rgba(255, 102, 0, 0.8);
-        }
-        
-        /* Early 2000s Hero Section */
-        .hero {
-            padding: 180px 0 100px;
-            background: var(--gradient-blue);
-            position: relative;
-            overflow: hidden;
-            border-bottom: 5px solid var(--accent-orange);
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: 
-                radial-gradient(circle at 20% 80%, var(--accent-gold) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--accent-orange) 0%, transparent 50%);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            color: var(--text-light);
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            animation: fadeInDown 1s ease;
-        }
-        
-        .hero h1 span {
-            color: var(--accent-gold);
-            display: block;
-            font-size: 56px;
-            margin-top: 10px;
-        }
-        
-        .official-badge {
-            display: inline-block;
-            background: var(--gradient-orange);
-            color: var(--text-light);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 30px;
-            border: 2px solid var(--accent-gold);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            animation: pulse 2s infinite;
-        }
-        
-        .hero-stats {
+
+        .nav-links {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 50px;
+            gap: 2rem;
         }
-        
-        .stat-box {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 8px;
-            padding: 20px;
-            width: 180px;
-            backdrop-filter: blur(5px);
-            transition: all 0.3s;
-        }
-        
-        .stat-box:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .stat-number {
-            font-size: 36px;
-            font-weight: bold;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-        
-        .stat-text {
-            color: var(--text-light);
-            font-size: 16px;
-        }
-        
-        /* Early 2000s Content Sections */
-        .section {
-            padding: 80px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: var(--primary-blue);
-            display: inline-block;
-            padding-bottom: 15px;
-            position: relative;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--accent-orange);
-            border-radius: 2px;
-        }
-        
-        /* Early 2000s Cards */
-        .card {
-            background: var(--text-light);
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border: 1px solid #ddd;
-            border-top: 5px solid var(--primary-blue);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--accent-orange);
-        }
-        
-        .card h3 {
-            color: var(--primary-blue);
-            font-size: 24px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
-        }
-        
-        /* Grid Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--primary-blue);
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            margin-bottom: 50px;
-            position: relative;
-            width: calc(50% - 40px);
-        }
-        
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            margin-right: auto;
-            padding-right: 40px;
-        }
-        
-        .timeline-item:nth-child(even) {
-            margin-left: auto;
-            margin-right: 0;
-            padding-left: 40px;
-        }
-        
-        .timeline-date {
-            background: var(--accent-orange);
-            color: var(--text-light);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 10px rgba(255, 102, 0, 0.3);
-        }
-        
-        /* Philanthropy Section */
-        .philanthropy {
-            background: var(--dark-bg);
-            color: var(--text-light);
-            border-bottom: 5px solid var(--accent-orange);
-        }
-        
-        .philanthropy .section-title h2 {
-            color: var(--text-light);
-        }
-        
-        .philanthropy .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-light);
-        }
-        
-        .philanthropy .card h3 {
-            color: var(--accent-gold);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Contact Section */
-        .contact-card {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .contact-email {
-            display: inline-block;
-            background: var(--gradient-blue);
-            color: var(--text-light);
-            padding: 20px 40px;
-            border-radius: 8px;
-            font-size: 20px;
-            font-weight: bold;
+
+        .nav-links a {
+            color: var(--text-main);
             text-decoration: none;
-            margin: 30px 0;
-            border: 2px solid var(--accent-orange);
-            transition: all 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
         }
-        
-        .contact-email:hover {
-            background: var(--gradient-orange);
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Footer - Early 2000s style */
-        footer {
-            background: var(--gradient-blue);
-            color: var(--text-light);
-            padding: 50px 0 30px;
-            border-top: 5px solid var(--accent-orange);
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-col h3 {
-            color: var(--accent-gold);
-            font-size: 22px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-gold);
-            padding-left: 10px;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-        }
-        
-        /* Early 2000s Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-        
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero h1 span {
-                font-size: 42px;
-            }
-            
-            nav ul {
-                gap: 15px;
-            }
-            
-            nav a {
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .hero {
-                padding: 200px 0 80px;
-            }
-            
-            .hero h1 {
-                font-size: 28px;
-            }
-            
-            .hero h1 span {
-                font-size: 32px;
-            }
-            
-            .timeline::before {
-                left: 30px;
-            }
-            
-            .timeline-item {
-                width: calc(100% - 70px);
-                margin-left: 70px !important;
-                padding-left: 40px !important;
-                padding-right: 0 !important;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero-stats {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .stat-box {
-                width: 100%;
-                max-width: 250px;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Scroll to Top Button */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-orange);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 999;
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Sections */
+        section {
+            padding: 100px 10%;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
             opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
+            transform: translateY(30px);
+            transition: var(--transition);
         }
-        
-        .scroll-top.visible {
+
+        section.visible {
             opacity: 1;
-            visibility: visible;
             transform: translateY(0);
         }
-        
-        .scroll-top:hover {
-            background: var(--gradient-blue);
-            transform: translateY(-5px);
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
         }
-        
-        /* Marquee Effect (Early 2000s Classic) */
-        .marquee-container {
-            background: var(--primary-blue);
-            color: var(--text-light);
-            padding: 10px 0;
-            border-top: 2px solid var(--accent-orange);
-            border-bottom: 2px solid var(--accent-orange);
-            overflow: hidden;
-            margin: 30px 0;
+
+        .content-block {
+            max-width: 900px;
+            text-align: justify;
+            color: var(--text-dim);
         }
-        
-        .marquee-content {
-            white-space: nowrap;
-            animation: marquee 30s linear infinite;
+
+        /* Specific Page Styling */
+        .hero {
+            text-align: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .book-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .book-img:hover { transform: scale(1.02); }
+
+        .price-tag {
+            background: var(--gold);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
             font-weight: bold;
-            font-size: 18px;
+            display: inline-block;
+            margin-top: 1rem;
         }
-        
-        .marquee-content span {
-            color: var(--accent-gold);
-            margin: 0 20px;
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: var(--transition);
         }
-        
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--primary);
         }
-        
-        /* Watermark Effect */
-        .watermark {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            color: rgba(0, 77, 140, 0.1);
-            font-size: 120px;
-            font-weight: bold;
-            z-index: -1;
-            user-select: none;
-            pointer-events: none;
-            transform: rotate(-30deg);
+
+        /* Footer */
+        footer {
+            padding: 4rem 10%;
+            background: #070b14;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            text-align: left;
+            margin-top: 4rem;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 3rem; }
+            .book-grid { grid-template-columns: 1fr; }
+            h2 { font-size: 2rem; }
+            .legal-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Watermark -->
-    <div class="watermark">DH</div>
-    
-    <!-- Header -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <div class="logo-icon">DH</div>
-                <div class="logo-text">Daksh<span>Hande</span>.site</div>
-            </div>
-            
-            <nav>
-                <ul id="navLinks">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#career">Career</a></li>
-                    <li><a href="#philanthropy">Philanthropy</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+
+    <nav class="no-select">
+        <a href="#home" class="logo">DAKSH HANDE</a>
+        <div class="nav-links">
+            <a href="#career">Career</a>
+            <a href="#philanthropy">Philanthropy</a>
+            <a href="#books">Books</a>
+            <a href="#contact">Contact</a>
         </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <div class="official-badge">✓ 100% OFFICIAL & VERIFIED</div>
-            <h1>Daksh Hande<br><span>Customer Service Executive</span></h1>
-            <p style="color: #fff; font-size: 20px; max-width: 800px; margin: 0 auto 30px;">
-                Currently serving at <strong style="color: var(--accent-gold);">Absolute Barbecue</strong> | Future Philanthropist starting <strong style="color: var(--accent-gold);">2028</strong> | The only genuine and verified platform representing Daksh Hande
-            </p>
-            
-            <div class="hero-stats">
-                <div class="stat-box">
-                    <div class="stat-number">2028</div>
-                    <div class="stat-text">Philanthropy Launch</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">₹10</div>
-                    <div class="stat-text">Official App Price</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-text">Transparency</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">✓</div>
-                    <div class="stat-text">Verified Official</div>
-                </div>
+    </nav>
+
+    <section id="home" class="hero visible">
+        <h1>Daksh Hande</h1>
+        <p style="letter-spacing: 5px; color: var(--gold);">VISIONARY | AUTHOR | PROFESSIONAL</p>
+        <div class="content-block" style="margin-top: 2rem; text-align: center;">
+            <p>Welcome to the official digital estate of Daksh Hande. A space dedicated to professional excellence, literary contribution, and the pursuit of societal betterment. Built on the pillars of integrity and forward-thinking, this platform serves as a nexus for career milestones and financial advocacy for the modern generation.</p>
+        </div>
+    </section>
+
+    <section id="career">
+        <h2>Professional Career</h2>
+        <div class="content-block">
+            <p><strong>Current Tenure: Customer Service Executive, Absolute Barbecue (Oct 2025 – Present)</strong></p>
+            <br>
+            <p>In the high-stakes environment of the hospitality and service industry, excellence is not just a goal—it is a baseline requirement. Since October 2025, Daksh Hande has been serving as a Customer Service Executive at Absolute Barbecue. This role demands a unique blend of psychological acuity, operational efficiency, and crisis management. My tenure here is defined by a commitment to the "Guest First" philosophy, ensuring that every interaction is seamless, professional, and exceeds the rigorous standards set by the brand.</p>
+            <p>Beyond the technical aspects of service, my role involves sophisticated communication strategies and team synergy. Handling a diverse clientele requires an adaptable communication style—one that can pivot from formal corporate etiquette to warm, engaging hospitality in a heartbeat. I manage real-time feedback loops, optimize guest experiences, and contribute to the operational flow that makes Absolute Barbecue a leader in its segment. This experience has honed my leadership skills, teaching me the nuances of high-volume operations and the importance of maintaining brand reputation through consistent, high-quality service delivery. My professional journey is a testament to the belief that every role is an opportunity to master the art of human connection and organizational excellence.</p>
+        </div>
+    </section>
+
+    <section id="philanthropy">
+        <h2>Philanthropy & Impact</h2>
+        <div class="content-block">
+            <p>Philanthropy, to Daksh Hande, is not merely about financial contributions; it is about the strategic deployment of resources to create sustainable, long-term change. My approach to giving is rooted in the "Enlightened Self-Interest" philosophy—the understanding that a thriving society benefits every individual within it. I focus my efforts on two primary sectors: Educational Equity and Community Resilience.</p>
+            <p>I believe that the greatest barrier to progress is a lack of access to specialized knowledge. Therefore, my philanthropic initiatives often revolve around mentorship programs for underprivileged youth, providing them with the intellectual tools needed to break cycles of systemic disadvantage. By focusing on financial literacy as a core pillar of my charitable work, I aim to empower the next generation to achieve self-sufficiency. This isn't just charity; it's an investment in the human capital of our future. Furthermore, I actively support local community drives that focus on nutritional security and vocational training. In a world that is rapidly evolving, the ability to adapt and learn new skills is the ultimate safety net. My goal is to create a legacy where my professional success directly translates into the elevation of those around me, fostering a culture of mutual growth and profound social responsibility. We do not just live in a community; we build it.</p>
+        </div>
+    </section>
+
+    <section id="books">
+        <h2>Literary Works</h2>
+        <div class="book-grid">
+            <div>
+                <img src="https://i.imgur.com/YOUR_IMAGE_URL.jpg" alt="Zero to 50k Book Cover" class="book-img">
+            </div>
+            <div class="content-block">
+                <h3>Zero to 50k: The Financial Blueprint</h3>
+                <span class="price-tag">Price: ₹17.70</span>
+                <p style="margin-top: 1.5rem;">Launched in early 2026, <strong>"Zero to 50k"</strong> is a seminal self-published work available exclusively on the Google Play Store and Play Books. This ebook is meticulously crafted to bridge the gap between academic learning and real-world financial mastery. It specifically targets Gen Z and young professionals who find themselves entering a complex, often volatile economic landscape without a clear roadmap.</p>
+                <p>The book dismantles the myth that wealth creation is reserved for the elite. Instead, it provides a granular, step-by-step guide on how to navigate the transition from zero savings to a robust ₹50,000 foundation. It covers essential topics such as high-yield savings, the psychology of spending, micro-investing, and the importance of side-hustle scalability in the digital age. In an era of "fin-fluencers" and conflicting advice, "Zero to 50k" stands out as a beacon of honest, actionable, and pragmatic financial education. It is more than a book; it is a movement toward financial sovereignty for the modern worker. At the accessible price of ₹17.70, it is my gift to the ambitious youth of today, ensuring that high-quality financial education is a right, not a luxury.</p>
+                <a href="https://play.google.com/store/books" class="btn">Purchase on Google Play</a>
             </div>
         </div>
     </section>
-    
-    <!-- Marquee -->
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <span>✓ OFFICIAL WEBSITE</span> • DAKSH HANDE • CUSTOMER SERVICE EXECUTIVE • ABSOLUTE BARBECUE • 
-            <span>✓ PHILANTHROPY 2028</span> • OFFICIAL APP: ₹10 • 
-            <span>✓ 100% VERIFIED</span> • OFFICIAL EMAIL: HANDEDAKSH@GMAIL.COM • 
-            <span>✓ TRANSPARENT REPORTS</span> • ANNUAL FINANCIAL STATEMENTS •
-        </div>
-    </div>
-    
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Official Information & Verification</p>
-            </div>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>Official Profile</h3>
-                    <p>This platform serves as the <strong>only authentic digital presence</strong> of Daksh Hande. I am currently serving as a Customer Service Executive at Absolute Barbecue, where I focus on delivering exceptional customer experiences.</p>
-                    <p>My professional approach emphasizes building meaningful connections, proactive problem-solving, and creating sustainable value for both customers and organizations.</p>
-                    <p style="margin-top: 15px; color: var(--primary-blue); font-weight: bold;">
-                        ✓ 100% Verified & Authentic Platform
-                    </p>
-                </div>
-                
-                <div class="card">
-                    <h3>Verification Details</h3>
-                    <ul style="list-style: none; padding-left: 10px;">
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Full Name:</strong> Daksh Hande
-                        </li>
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Current Position:</strong> Customer Service Executive
-                        </li>
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Organization:</strong> Absolute Barbecue
-                        </li>
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Official Email:</strong> handedaksh@gmail.com
-                        </li>
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Philanthropy Start:</strong> 2028
-                        </li>
-                        <li style="margin-bottom: 10px; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: var(--accent-orange);">✓</span>
-                            <strong>Mobile App:</strong> ₹10 (Google Play Store)
-                        </li>
-                    </ul>
-                </div>
+
+    <section id="contact">
+        <h2>Connect</h2>
+        <div class="content-block">
+            <p>For high-level inquiries, professional collaborations, or literary discussions, please reach out through official channels only. I prioritize communications that are concise, professional, and purpose-driven.</p>
+            <div style="margin-top: 3rem; border-left: 2px solid var(--gold); padding-left: 2rem;">
+                <p style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Official Email Address</p>
+                <a href="mailto:handedaksh@gmail.com" style="color: var(--text-main); font-size: 2rem; text-decoration: none; word-break: break-all;">handedaksh@gmail.com</a>
             </div>
         </div>
     </section>
-    
-    <!-- Career Section -->
-    <section id="career" class="section" style="background: #f8fafc;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Career Journey</h2>
-                <p>Professional Timeline & Future Plans</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="timeline-date">2025 - Present</div>
-                        <h3>Customer Service Executive</h3>
-                        <p style="color: var(--accent-orange); font-weight: bold; margin-bottom: 15px;">Absolute Barbecue</p>
-                        <p>Currently enhancing customer satisfaction through proactive service delivery, feedback implementation, and experience optimization at Absolute Barbecue.</p>
-                        <p>Focus on resolving customer queries efficiently while maintaining the highest standards of service quality.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="timeline-date">2025 (Planned)</div>
-                        <h3>Mobile App Launch</h3>
-                        <p style="color: var(--accent-orange); font-weight: bold; margin-bottom: 15px;">Official Application</p>
-                        <p>Launching the official "Daksh Hande" mobile application on Google Play Store priced at ₹10. The app will provide direct access to official updates and content.</p>
-                        <p><strong>100% of net proceeds</strong> will be allocated to future philanthropy initiatives starting 2028.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="card">
-                        <div class="timeline-date">2028 (Future)</div>
-                        <h3>Philanthropy Launch</h3>
-                        <p style="color: var(--accent-orange); font-weight: bold; margin-bottom: 15px;">Social Initiatives Begin</p>
-                        <p>Initiating comprehensive philanthropy programs focused on education, healthcare accessibility, and community development projects.</p>
-                        <p>Complete financial transparency with annual statements published on this official platform.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Philanthropy Section -->
-    <section id="philanthropy" class="section philanthropy">
-        <div class="container">
-            <div class="section-title">
-                <h2>Philanthropy Vision</h2>
-                <p>Comprehensive Social Impact Strategy from 2028</p>
-            </div>
-            
-            <div class="grid">
-                <div class="card">
-                    <h3>📊 Transparent Reporting</h3>
-                    <p>Annual financial statements with detailed allocation breakdown published for complete transparency and donor confidence.</p>
-                    <p style="margin-top: 15px; font-style: italic;">"Transparency builds trust, and trust builds impact."</p>
-                </div>
-                
-                <div class="card">
-                    <h3>📱 App Contributions</h3>
-                    <p>Official mobile app sales (₹10) will fund 100% of initial philanthropy initiatives with clear fund tracking and reporting.</p>
-                    <p style="margin-top: 15px; font-style: italic;">"Every download contributes to meaningful change."</p>
-                </div>
-                
-                <div class="card">
-                    <h3>🎯 Focused Impact</h3>
-                    <p>Strategic focus on education, healthcare access, and environmental sustainability with measurable outcomes and regular progress updates.</p>
-                    <p style="margin-top: 15px; font-style: italic;">"Quality over quantity in creating lasting impact."</p>
-                </div>
-                
-                <div class="card">
-                    <h3>🔒 Verified Platform</h3>
-                    <p>This is the only authorized platform for philanthropy initiatives. All other claims are unauthorized and potentially fraudulent.</p>
-                    <p style="margin-top: 15px; font-style: italic;">"Authenticity is non-negotiable in philanthropy."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact</h2>
-                <p>Official Communication Channels</p>
-            </div>
-            
-            <div class="contact-card card">
-                <h3>Official Contact Information</h3>
-                <p>For genuine inquiries, verification requests, or collaboration proposals, please use only the following official contact method:</p>
-                
-                <a href="mailto:handedaksh@gmail.com" class="contact-email">
-                    ✉️ handedaksh@gmail.com
-                </a>
-                
-                <p><strong style="color: var(--accent-orange);">Security Notice:</strong> This is the only authorized email address. Beware of impersonators and fraudulent communication attempts.</p>
-                <p style="margin-top: 20px; color: var(--primary-blue); font-weight: bold; font-size: 18px;">
-                    ✓ 100% Genuine & Officially Verified Platform
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
+
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DakshHande.site</h3>
-                    <p>The only official and verified platform representing Daksh Hande - CSE at Absolute Barbecue and future philanthropist starting 2028.</p>
-                    <p style="margin-top: 15px; color: var(--accent-gold); font-weight: bold;">✓ 100% Verified & Authentic</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#career">Career</a></li>
-                        <li><a href="#philanthropy">Philanthropy</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Official Details</h3>
-                    <ul class="footer-links">
-                        <li>Daksh Hande</li>
-                        <li>CSE at Absolute Barbecue</li>
-                        <li><a href="mailto:handedaksh@gmail.com">handedaksh@gmail.com</a></li>
-                        <li>Philanthropy: 2028</li>
-                        <li>App Price: ₹10</li>
-                    </ul>
-                </div>
+        <p class="no-select" style="color: var(--gold);">&copy; 2026 Daksh Hande. All Rights Reserved.</p>
+        
+        <div class="legal-grid">
+            <div>
+                <h4 style="margin-bottom: 1rem; color: #fff;">Terms of Service</h4>
+                <ol style="margin-left: 1rem; color: var(--text-dim);">
+                    <li>Service is provided 'as-is' without warranties.</li>
+                    <li>The name 'Daksh Hande' is a protected brand.</li>
+                    <li>Unauthorized use of site content is prohibited.</li>
+                    <li>Ebook purchases are subject to Google Play terms.</li>
+                    <li>Professional inquiries must be legitimate.</li>
+                    <li>Users must not attempt to breach site security.</li>
+                    <li>Content is for informational purposes only.</li>
+                    <li>Any legal disputes fall under local jurisdiction.</li>
+                    <li>External links are visited at the user's risk.</li>
+                    <li>We reserve the right to update these terms.</li>
+                </ol>
             </div>
-            
-            <div class="copyright">
-                <p>Copyright &copy; 2023-2025 Daksh Hande. All rights reserved. This is the only official website.</p>
-                <p style="margin-top: 10px; font-size: 14px;">This website is 100% genuine, verified, and authentic. Beware of impersonators.</p>
+            <div>
+                <h4 style="margin-bottom: 1rem; color: #fff;">Privacy Policy</h4>
+                <ol style="margin-left: 1rem; color: var(--text-dim);">
+                    <li>We respect your digital footprint and privacy.</li>
+                    <li>No personal data is collected via this landing page.</li>
+                    <li>Cookies are used only for site performance.</li>
+                    <li>Email data is never shared with third parties.</li>
+                    <li>We comply with global data protection standards.</li>
+                    <li>Our security protocols are regularly updated.</li>
+                    <li>Users may request data deletion if applicable.</li>
+                    <li>No tracking pixels are used for advertising.</li>
+                    <li>Encryption is used for all mail-to interactions.</li>
+                    <li>Privacy is a fundamental right on this domain.</li>
+                </ol>
             </div>
         </div>
     </footer>
-    
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop">↑</button>
-    
-    <!-- Early 2000s Inspired JavaScript -->
+
     <script>
-        // Page Load Effect
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.8s';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-            
-            // Security message in console (early 2000s style)
-            console.log('%c🔐 SECURITY NOTICE 🔐', 'color: #004d8c; font-size: 18px; font-weight: bold; background: #ffcc00; padding: 10px;');
-            console.log('%cOfficial Website: dakshhande.site', 'color: #333; font-size: 14px;');
-            console.log('%cOfficial Email: handedaksh@gmail.com', 'color: #ff6600; font-size: 14px; font-weight: bold;');
-            console.log('%c✓ 100% Verified & Authentic Platform', 'color: #004d8c; font-size: 14px; font-weight: bold;');
-        });
-        
-        // Header scroll effect
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.4)';
-            } else {
-                header.style.padding = '15px 0';
-                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
-            }
-        });
-        
-        // Navigation active state
-        const navLinks = document.querySelectorAll('nav a');
-        const sections = document.querySelectorAll('section');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
+        // Smooth Animation on Scroll (Intersection Observer API)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
             });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
+
+        // Basic Security: Console Warning
+        console.log("%cSecurity Notice: Unauthorized access to source is logged.", "color: red; font-size: 20px; font-weight: bold;");
         
-        // Scroll to top button
-        const scrollTopBtn = document.getElementById('scrollTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                scrollTopBtn.classList.add('visible');
-            } else {
-                scrollTopBtn.classList.remove('visible');
-            }
-        });
-        
-        scrollTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // Early 2000s style hover effects for cards
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.borderTopColor = '#ff6600';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.borderTopColor = '#004d8c';
-            });
-        });
-        
-        // Marquee hover pause
-        const marquee = document.querySelector('.marquee-content');
-        const marqueeContainer = document.querySelector('.marquee-container');
-        
-        marqueeContainer.addEventListener('mouseenter', () => {
-            marquee.style.animationPlayState = 'paused';
-        });
-        
-        marqueeContainer.addEventListener('mouseleave', () => {
-            marquee.style.animationPlayState = 'running';
-        });
-        
-        // Year update in footer
-        document.addEventListener('DOMContentLoaded', () => {
-            const yearSpan = document.querySelector('.copyright p');
-            const currentYear = new Date().getFullYear();
-            if (yearSpan) {
-                yearSpan.innerHTML = yearSpan.innerHTML.replace('2023-2025', `2023-${currentYear}`);
-            }
-            
-            // Add floating animation to stat boxes
-            const statBoxes = document.querySelectorAll('.stat-box');
-            statBoxes.forEach((box, index) => {
-                box.style.animation = `float 3s ease-in-out ${index * 0.5}s infinite`;
-            });
-        });
-        
-        // Add classic early 2000s cursor effect
-        document.addEventListener('mousemove', (e) => {
-            const cursor = document.createElement('div');
-            cursor.style.position = 'fixed';
-            cursor.style.width = '8px';
-            cursor.style.height = '8px';
-            cursor.style.backgroundColor = 'rgba(255, 102, 0, 0.7)';
-            cursor.style.borderRadius = '50%';
-            cursor.style.pointerEvents = 'none';
-            cursor.style.zIndex = '9999';
-            cursor.style.left = e.pageX + 'px';
-            cursor.style.top = e.pageY + 'px';
-            cursor.style.transform = 'translate(-50%, -50%)';
-            
-            document.body.appendChild(cursor);
-            
-            setTimeout(() => {
-                cursor.style.opacity = '0';
-                cursor.style.transition = 'opacity 0.5s';
-                setTimeout(() => {
-                    if (cursor.parentNode) {
-                        cursor.parentNode.removeChild(cursor);
-                    }
-                }, 500);
-            }, 100);
-        });
-        
-        // Early 2000s style alert for print attempt
-        document.addEventListener('keydown', (e) => {
-            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                e.preventDefault();
-                alert('For official documentation, please contact handedaksh@gmail.com\n✓ Official Website: dakshhande.site');
-            }
-        });
-        
-        // Add page transition effect for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Add fade out effect
-                    document.body.style.opacity = '0.7';
-                    document.body.style.transition = 'opacity 0.3s';
-                    
-                    setTimeout(() => {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Fade back in
-                        setTimeout(() => {
-                            document.body.style.opacity = '1';
-                        }, 300);
-                    }, 150);
-                }
-            });
-        });
+        // Disable Right Click (Optional Security Measure)
+        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 </html>
