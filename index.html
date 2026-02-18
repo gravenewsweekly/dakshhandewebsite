@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daksh Hande | Official Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="Official Portfolio of Daksh Hande. Customer Service Executive at Skyline Telesolutions, Author, and Philanthropist. Exploring financial freedom for students.">
+    <meta name="keywords" content="Daksh Hande, Skyline Telesolutions, Student Financial Freedom, Ebooks, Philanthropy 2028">
+    <meta name="author" content="Daksh Hande">
+    <title>DAKSH HANDE | OFFICIAL BRAND</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #0f172a;
-            --accent: #e2e8f0;
             --gold: #c5a059;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray: #f4f4f4;
         }
 
         * {
@@ -23,301 +26,297 @@
         }
 
         body {
-            background-color: var(--primary);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.8;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Security & Robustness - Prevent text selection on UI elements */
-        .no-select { user-select: none; }
+        /* Hardened JS Overlay for "Unhackable" Feel */
+        #security-layer { display: none; }
 
-        /* Navigation */
+        /* Navigation - Dior Style */
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 1.5rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            padding: 20px 50px;
+            background: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid #eee;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 24px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: var(--transition);
+            font-weight: 700;
         }
 
-        .nav-links a:hover { color: var(--gold); }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
 
-        /* Sections */
-        section {
-            padding: 100px 10%;
-            min-height: 100vh;
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition);
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
         }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            background: #27ae60;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        /* Sections Content */
+        section {
+            padding: 100px 10%;
+            min-height: 80vh;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .text-block {
+            font-size: 16px;
+            text-align: justify;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 2rem;
+            font-size: 40px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        /* Careers & E-books Cards */
+        .card {
+            background: var(--gray);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .price {
+            font-weight: 700;
             color: var(--gold);
+            font-size: 20px;
         }
 
-        .content-block {
-            max-width: 900px;
-            text-align: justify;
-            color: var(--text-dim);
-        }
-
-        /* Specific Page Styling */
-        .hero {
-            text-align: center;
-            align-items: center;
-            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-        }
-
-        .hero h1 {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .book-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .book-img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .book-img:hover { transform: scale(1.02); }
-
-        .price-tag {
-            background: var(--gold);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            margin-top: 2rem;
-            transition: var(--transition);
-        }
-
-        .btn:hover {
-            background: var(--gold);
-            color: var(--primary);
-        }
-
-        /* Footer */
+        /* Footer & Legal */
         footer {
-            padding: 4rem 10%;
-            background: #070b14;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
+            background: var(--black);
+            color: white;
+            padding: 50px 10%;
+            font-size: 12px;
         }
 
         .legal-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            text-align: left;
-            margin-top: 4rem;
-            font-size: 0.85rem;
+            gap: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
         }
 
-        /* Mobile Responsive */
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Mobile Friendly */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 3rem; }
-            .book-grid { grid-template-columns: 1fr; }
-            h2 { font-size: 2rem; }
-            .legal-grid { grid-template-columns: 1fr; }
+            .content-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 40px; }
+            nav { padding: 20px; }
+            nav ul { display: none; } /* Simplified for demo */
         }
     </style>
 </head>
 <body>
 
-    <nav class="no-select">
-        <a href="#home" class="logo">DAKSH HANDE</a>
-        <div class="nav-links">
-            <a href="#career">Career</a>
-            <a href="#philanthropy">Philanthropy</a>
-            <a href="#books">Books</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <nav>
+        <div class="logo">Daksh Hande</div>
+        <ul>
+            <li><a href="#about">Legacy</a></li>
+            <li><a href="#careers">Career</a></li>
+            <li><a href="#publications">E-Books</a></li>
+            <li><a href="#philanthropy">2028 Vision</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section id="home" class="hero visible">
-        <h1>Daksh Hande</h1>
-        <p style="letter-spacing: 5px; color: var(--gold);">VISIONARY | AUTHOR | PROFESSIONAL</p>
-        <div class="content-block" style="margin-top: 2rem; text-align: center;">
-            <p>Welcome to the digital estate of Daksh Hande. This platform stands as a testament to professional rigor, literary exploration, and the relentless pursuit of societal advancement. Here, integrity meets innovation, serving as a nexus for career milestones and a beacon for financial advocacy tailored to the modern generation.</p>
+    <section class="hero">
+        <h1>DAKSH HANDE</h1>
+        <p>AUTHOR | VISIONARY | PROFESSIONAL</p>
+        <div class="status-badge">OPEN TO WORK & COLLABORATION</div>
+    </section>
+
+    <section id="about">
+        <div class="content-grid">
+            <div class="text-block">
+                <h2>The Origin Story</h2>
+                <p>
+                    The Daksh Hande brand is not just a name; it is an institution of ambition and structured excellence. Born from a desire to bridge the gap between student life and absolute financial sovereignty, Daksh Hande has emerged as a beacon for the modern youth. This portfolio serves as a living testament to a journey fueled by relentless curiosity and a sharp wit that keeps the corporate world on its toes. Since the inception of his professional path, Daksh has maintained that style and substance are not mutually exclusive.
+                </p>
+                <br>
+                <p>
+                    Why the humor? Because life is too short to be as dry as a stale biscuit. Daksh believes that while the work must be of Dior quality, the personality should be as relatable as a Sunday brunch. This unique blend of high-end professionalism and approachable charisma is what sets this brand apart in 2026. Whether it is navigating complex customer relations or authoring the next guide to financial freedom, the approach remains the same: Absolute precision, punctuated by a smile. This is the authentic, 100% legit destination for those who seek more than just a resume—they seek a vision.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Office Luxe" style="width:100%; border-radius: 8px;">
         </div>
     </section>
 
-    <section id="career">
-        <h2>Professional Career</h2>
-        <div class="content-block">
-            <p><strong>Current Tenure: Customer Service Executive, Absolute Barbecue (Oct 2025 – Present)</strong></p>
-            <br>
-            <p>In the dynamic ecosystem of the premium hospitality sector, operational excellence is the only metric that matters. Since October 2025, I have served as a Customer Service Executive at Absolute Barbecue, a role that demands a synthesis of psychological acuity, crisis management, and unwavering professionalism. My tenure is defined by the "Guest First" philosophy—a commitment to ensuring every interaction is not merely transactional, but transformational.</p>
-            <p>My responsibilities extend beyond standard service; they involve orchestrating the seamless flow of high-volume operations while maintaining a calm, sophisticated atmosphere. Mastering the art of human connection, I employ adaptive communication strategies to manage diverse clientele, turning potential friction points into moments of brand loyalty. This role has sharpened my leadership capabilities, reinforcing the belief that true organizational success is built on the foundation of consistent, high-quality human engagement.</p>
-        </div>
-    </section>
-
-    <section id="philanthropy">
-        <h2>Philanthropy & Impact</h2>
-        <div class="content-block">
-            <p>True philanthropy transcends monetary donation; it is the strategic allocation of resources to foster sustainable resilience. My approach is grounded in "Enlightened Self-Interest"—the recognition that individual success is inextricably linked to the health of the community. My initiatives focus on two critical vectors: Educational Equity and Community Nutrition.</p>
-            <p>I view specialized knowledge as the ultimate equalizer. Consequently, my work centers on mentorship programs that equip underprivileged youth with financial literacy, providing them the intellectual capital to navigate modern economies. By demystifying wealth creation, I aim to break systemic cycles of dependency. Parallel to this, I actively support grassroots nutritional drives, believing that physical well-being is the prerequisite for intellectual growth. My goal is to build a legacy where professional achievements catalyze broad societal elevation.</p>
-        </div>
-    </section>
-
-    <section id="books">
-        <h2>Literary Works</h2>
-        <div class="book-grid">
-            <div>
-                <img src="https://i.imgur.com/ihby45Y.png" alt="Zero to 50k Book Cover" class="book-img">
+    <section id="careers" style="background:#fafafa;">
+        <h2>Professional Path</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3>Skyline Telesolutions</h3>
+                <p><strong>Role:</strong> Customer Service Executive</p>
+                <p><strong>Tenure:</strong> October 2025 – Present</p>
+                <p style="margin-top:15px;">
+                    In the high-pressure environment of Skyline Telesolutions, Daksh has mastered the art of "Aggressive Politeness." Handling complex queries with the grace of a catwalk model, he has maintained top-tier performance metrics. He doesn't just solve problems; he curate's experiences. Currently, Daksh is <strong>Open to Work</strong> and looking for new horizons where his unique blend of logic and empathy can be utilized to scale brand operations.
+                </p>
             </div>
-            <div class="content-block">
-                <h3>Zero to 50k: The Financial Blueprint</h3>
-                <span class="price-tag">Price: ₹17.70</span>
-                <p style="margin-top: 1.5rem;">Released in 2026, <strong>"Zero to 50k"</strong> is a tactical manual designed for Gen Z professionals entering a volatile economic landscape. It dismantles the gatekeeping of wealth, offering a granular roadmap from zero savings to a solid ₹50,000 foundation. Covering high-yield psychology and micro-investing, it is an essential guide for financial sovereignty.</p>
-                <a href="https://play.google.com/store/books/details?id=p-a4EQAAQBAJ" class="btn">Purchase on Play Store</a>
-            </div>
-
-            <div>
-                <img src="https://via.placeholder.com/400x600/0f172a/c5a059?text=Student+Income" alt="Making a Stable Income Book Cover" class="book-img">
-            </div>
-            <div class="content-block">
-                <h3>Making a Stable Income being a Student</h3>
-                <span class="price-tag">Price: ₹23.30</span>
-                <p style="margin-top: 1.5rem;"><strong>"Making a Stable Income being a Student"</strong> addresses the defining challenge of the academic experience: balancing rigorous coursework with financial independence. This book is not just theoretical; it is a survival guide for the modern scholar.</p>
-                <p>Available exclusively on Play Books, this work explores time-efficient revenue streams, freelancing ecosystems, and digital asset creation tailored specifically for those with limited schedules. It bridges the gap between the classroom and the marketplace, ensuring that your education pays dividends before you even graduate. At ₹23.30, it is an investment in your autonomy.</p>
-                <a href="https://play.google.com/store/books" class="btn">Purchase on Play Store</a>
+            <div class="text-block">
+                <p>Managing the front lines of customer experience at Skyline Telesolutions since late 2025 has provided Daksh with an unhackable set of soft skills. From conflict de-escalation to technical troubleshooting, the journey has been nothing short of transformative. This role serves as the backbone of his professional reliability, proving that he can handle the "Zara-level" foot traffic of digital inquiries without breaking a sweat. If you are looking for a candidate who brings both the "Hardest Logic" and a touch of class to your executive team, look no further.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Connect</h2>
-        <div class="content-block">
-            <p>For professional collaborations, literary inquiries, or high-level consultation, please utilize the official channel below. I value brevity and purpose in all professional discourse.</p>
-            <div style="margin-top: 3rem; border-left: 2px solid var(--gold); padding-left: 2rem;">
-                <p style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Official Email Address</p>
-                <a href="mailto:handedaksh@gmail.com" style="color: var(--text-main); font-size: 2rem; text-decoration: none; word-break: break-all;">handedaksh@gmail.com</a>
+    <section id="publications">
+        <h2>Global Publications</h2>
+        <div class="content-grid">
+            <div class="card">
+                <h3>0-50k: A Student's Financial Freedom</h3>
+                <p>Published on Google Play Books</p>
+                <p>A comprehensive roadmap for the modern student to achieve independence without the corporate fluff.</p>
+                <p class="price">₹ 17.70</p>
+            </div>
+            <div class="card">
+                <h3>Making a Stable Income</h3>
+                <p>Student Edition Guide</p>
+                <p>The definitive guide to ensuring your bank account stays as stylish as your wardrobe during your academic years.</p>
+                <p class="price">₹ 23.30</p>
             </div>
         </div>
+    </section>
+
+    <section id="philanthropy" style="text-align:center; background: var(--black); color: white;">
+        <h2 style="color:white; border:none;">2028: The Philanthropy Initiative</h2>
+        <p style="max-width: 800px; margin: 0 auto;">
+            True luxury is the ability to give back. Starting in 2028, the Daksh Hande brand will officially pivot a percentage of all proceeds toward student empowerment funds and financial literacy workshops. We aren't just building a career; we are building a legacy of independence. Stay tuned as we prepare to change the world, one student at a time.
+        </p>
+    </section>
+
+    <section id="contact" style="text-align:center;">
+        <h2>Get In Touch</h2>
+        <p>For high-level inquiries, brand collaborations, or to offer me a job that pays in gold bars (or just a really good salary):</p>
+        <br>
+        <a href="mailto:hello@dakshhande.com" style="font-size: 24px; color: var(--gold); text-decoration: none; font-weight: bold;">dakshhande.official@email.com</a>
     </section>
 
     <footer>
-        <p class="no-select" style="color: var(--gold);">&copy; 2026 Daksh Hande. All Rights Reserved.</p>
-        
         <div class="legal-grid">
             <div>
-                <h4 style="margin-bottom: 1rem; color: #fff;">Terms of Service</h4>
-                <ol style="margin-left: 1rem; color: var(--text-dim);">
-                    <li>Service is provided 'as-is' without warranties.</li>
-                    <li>The name 'Daksh Hande' is a protected brand.</li>
-                    <li>Unauthorized use of site content is prohibited.</li>
-                    <li>Ebook purchases are subject to Google Play terms.</li>
-                    <li>Professional inquiries must be legitimate.</li>
-                    <li>Users must not attempt to breach site security.</li>
-                    <li>Content is for informational purposes only.</li>
-                    <li>Any legal disputes fall under local jurisdiction.</li>
-                    <li>External links are visited at the user's risk.</li>
-                    <li>We reserve the right to update these terms.</li>
+                <h3>10 Terms of Service</h3>
+                <ol>
+                    <li>Brand authenticity is guaranteed. 2. No unauthorized use of the 'Daksh' wit. 3. All ebooks are copyrighted. 4. Philanthropy starts 2028. 5. External links are visited at own risk. 6. Skyline Telesolutions mentions are for career history only. 7. Prices are subject to Google Play changes. 8. Respect the hustle. 9. No spamming the email. 10. Stay stylish.
                 </ol>
             </div>
             <div>
-                <h4 style="margin-bottom: 1rem; color: #fff;">Privacy Policy</h4>
-                <ol style="margin-left: 1rem; color: var(--text-dim);">
-                    <li>We respect your digital footprint and privacy.</li>
-                    <li>No personal data is collected via this landing page.</li>
-                    <li>Cookies are used only for site performance.</li>
-                    <li>Email data is never shared with third parties.</li>
-                    <li>We comply with global data protection standards.</li>
-                    <li>Our security protocols are regularly updated.</li>
-                    <li>Users may request data deletion if applicable.</li>
-                    <li>No tracking pixels are used for advertising.</li>
-                    <li>Encryption is used for all mail-to interactions.</li>
-                    <li>Privacy is a fundamental right on this domain.</li>
+                <h3>10 Privacy Policies</h3>
+                <ol>
+                    <li>We don't sell your data. 2. Cookies are for eating, but we use digital ones. 3. Encryption is active. 4. Email logs are private. 5. We respect GDPR. 6. No third-party tracking. 7. Your financial freedom is your business. 8. We secure all scripts. 9. Data deleted upon request. 10. We stay 100% legit.
                 </ol>
             </div>
         </div>
+        <p style="text-align:center; margin-top:50px;">&copy; 2026 DAKSH HANDE. ALL RIGHTS RESERVED. UNHACKABLE BRAND LOGIC APPLIED.</p>
     </footer>
 
     <script>
-        // Smooth Animation on Scroll (Intersection Observer API)
-        const observerOptions = {
-            threshold: 0.1
-        };
+        /* Hardened Logic: Prevent Console Injection & Simple Scraping */
+        (function() {
+            console.log("%c STOP! This is an Official Brand Website.", "color: red; font-size: 30px; font-weight: bold;");
+            console.log("Any attempt to hack or copy this logic will result in a 2028 Philanthropy ban.");
+            
+            window.addEventListener('contextmenu', function (e) { 
+                e.preventDefault(); 
+            }, false);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+            document.onkeydown = function(e) {
+                if(e.keyCode == 123) return false; // Block F12
+                if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+                if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+                if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+            };
+        })();
+
+        // Smooth reveal on scroll logic
+        window.addEventListener('scroll', () => {
+            let sections = document.querySelectorAll('section');
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                if(top >= offset && top < offset + height) {
+                    sec.style.transition = "opacity 1s ease-in";
+                    sec.style.opacity = "1";
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
         });
-
-        // Basic Security: Console Warning
-        console.log("%cSecurity Notice: Unauthorized access to source is logged.", "color: red; font-size: 20px; font-weight: bold;");
-        
-        // Disable Right Click
-        document.addEventListener('contextmenu', event => event.preventDefault());
     </script>
 </body>
 </html>
